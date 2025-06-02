@@ -11,7 +11,7 @@ build-backend = "hatchling.build"
 [project]
 name = "ssc-resource-hub"
 version = "0.0.1"
-description = "A great new project"
+description = "Start your Software Engineering journey with this all-in-one resource hub."
 license = "MIT"
 
 authors = [
@@ -33,10 +33,6 @@ dev = [
     "pre-commit>=2.17.0",
     "bump2version",
     "twine",
-]
-tests = [
-    "pytest>=6.0",
-    "ruff",
 ]
 docs = [
     "mkdocs-material>=9.6.14",
