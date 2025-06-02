@@ -2,6 +2,34 @@
 
 A dedicated resource hub for Heidelberg University researchers developing scientific software — offering structured guidelines, training, templates, and best practices to ensure reproducible, sustainable, and high-quality research outputs.
 
+
+## Run this locally
+1. Clone the repository 
+```bash
+git clone https://github.com/ssciwr/ssc-resources-hub.git
+```
+
+2. Retrieve all GitHub submodules
+```bash
+git submodule update --init --recursive
+```
+
+3. Create and activate a virtual environment with uv
+```bash
+uv venv
+source .venv/bin/activate.py
+```
+
+4. Install dependencies
+```bash
+uv pip install ."[docs,dev]"
+```
+
+5. Run the MkDocs website locally
+```bash
+mkdocs serve
+```
+
 ## License
 
 **MIT License**
