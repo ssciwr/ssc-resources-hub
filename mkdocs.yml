@@ -1,0 +1,116 @@
+site_name: Scientific Software Center - Resource Hub
+site_url: https://ecarrenolozano.github.io/ssc-software-engineering-resources
+theme:
+  name: material
+  font:
+    text: Lato
+    code: Roboto Mono
+  favicon: assets/img/logo-ssc.png
+  features:
+    - content.code.copy
+    - content.action.edit
+    - navigation.tabs
+    - navigation.instant
+    - navigation.footer
+  palette:
+    - scheme: default
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+
+#=======    Website Navigation settings   =====
+nav:
+  - Home: index.md
+
+  - Start Here:
+    - Software Engineering at a glance: learn/explanation/software-engineering-intro.md
+
+  - SSC Coding Guidelines: 
+    - twin-repos/guidelines/README.md
+
+  - Courses:
+    - learn/on-demand-courses/index.md
+
+  - Lunch Python: 
+    - twin-repos/lunch-python/README.md
+
+  - Templates:
+    - resources/ssc-templates/cpp-templates.md
+    - resources/ssc-templates/fortran-templates.md
+    - resources/ssc-templates/jupyter-templates.md
+    - resources/ssc-templates/matlab-templates.md
+    - resources/ssc-templates/python-templates.md
+
+  - About:
+    - Project: omnicache-project/project.md
+    - Design philosophy: omnicache-project/design-philosophy.md
+    - Use Cases: omnicache-project/use-cases.md
+    - About: about.md
+
+  - Community:
+    - Join Us: community/index.md
+    - Where to Start: community/contribute.md
+    - Contribute to the Documentation: community/contribute-docs.md
+    - Contribute to the Code Base: community/contribute-codebase.md
+
+
+
+#=======    Extension settings (sorted alphabetically)  =====
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  #----- Python Markdown Extensions
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight: # Note: list of Pygments: https://pygments.org/docs/lexers/
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+#=======    Plugins    =====
+plugins:
+  - search
+  - include-markdown
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            annotations_path: brief
+            docstring_style: google
+            heading_level: 3
+            modernize_annotations: true
+            show_category_heading: true
+            show_object_full_path: false
+            show_root_toc_entry: true
+            show_signature: true
+            show_signature_annotations: false
+            signature_crossrefs: true
+
+extra:
+  icons:
+    - material
+    - path: assets/icons
+
+
+copyright: © Copyright 2022-2025, Scientific Software Center team.

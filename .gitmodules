@@ -1,0 +1,21 @@
+[submodule "docs/twin-repos/lunch-python"]
+	path = docs/twin-repos/lunch-python
+	url = https://github.com/ssciwr/lunch-time-python.git
+[submodule "docs/twin-repos/guidelines"]
+	path = docs/twin-repos/guidelines
+	url = https://github.com/ssciwr/guidelines.git
+[submodule "docs/twin-repos/cpp-project-template"]
+	path = docs/twin-repos/cpp-project-template
+	url = https://github.com/ssciwr/cpp-project-template.git
+[submodule "docs/twin-repos/cookiecutter-cpp-project"]
+	path = docs/twin-repos/cookiecutter-cpp-project
+	url = https://github.com/ssciwr/cookiecutter-cpp-project.git
+[submodule "docs/twin-repos/fortran-project-template"]
+	path = docs/twin-repos/fortran-project-template
+	url = https://github.com/ssciwr/fortran-project-template.git
+[submodule "docs/twin-repos/cookiecutter-python-package"]
+	path = docs/twin-repos/cookiecutter-python-package
+	url = https://github.com/ssciwr/cookiecutter-python-package.git
+[submodule "docs/twin-repos/python-project-template"]
+	path = docs/twin-repos/python-project-template
+	url = https://github.com/ssciwr/python-project-template.git

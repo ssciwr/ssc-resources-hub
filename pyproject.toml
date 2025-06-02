@@ -1,0 +1,55 @@
+#===================================
+#=======        BUILD       ========
+#===================================
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+#===================================
+#=======       PROJECT      ========
+#===================================
+[project]
+name = "omnicache"
+version = "0.0.1"
+description = "A great new project"
+license = "MIT"
+
+authors = [
+  {name = "Edwin C.", email="edwin@gmail.com"},
+]
+maintainers = [
+    {name="Edwin C.", email="edwin@gmail.com"},
+]
+
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "toml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "distlib",
+    "pre-commit>=2.17.0",
+    "bump2version",
+    "twine",
+]
+tests = [
+    "pytest>=6.0",
+    "ruff",
+]
+docs = [
+    "mkdocs-material>=9.6.14",
+    "pymdown-extensions>=10.15",
+    "mkdocstrings[python]>=0.29.1,<0.30",
+    "mkdocs-include-markdown-plugin"
+]
+
+#===================================
+#=======        TOOL        ========
+#===================================
+[tool.hatch.build.targets.wheel]
+packages = ["omnicache"]
+
+
+
