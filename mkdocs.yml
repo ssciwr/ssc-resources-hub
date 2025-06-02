@@ -1,31 +1,90 @@
 site_name: Scientific Software Center - Resource Hub
 site_url: https://ecarrenolozano.github.io/ssc-software-engineering-resources
+site_author: Scientific Software Center - Heidelberg University
+site_description: >-
+  A central hub for researchers at the University of Heidelberg who develop software 
+  — offering curated guidelines, courses, templates, and best practices to support
+  reproducible, sustainable, and high-quality scientific software development.
+
+
+
+
 theme:
   name: material
-  #custom_dir: docs/overrides/
+  custom_dir: material/overrides  
+  features:
+  #  - content.code.copy
+  #  - content.action.edit
+  #  - navigation.tabs
+  #  - navigation.instant
+  #  - navigation.footer
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  
+  #palette:
+    # - scheme: default
+    #   primary: teal
+    #   accent: light blue
+    #   toggle:
+    #     icon: material/toggle-switch
+    #     name: Switch to dark mode
+    # - scheme: slate
+    #   primary: teal
+    #   accent: light blue
+    #   toggle:
+    #     icon: material/toggle-switch-off
+    #     name: Switch to light mode
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+
+
   font:
     text: Lato
     code: Roboto Mono
   favicon: assets/img/logo-ssc.png
-  features:
-    - content.code.copy
-    - content.action.edit
-    - navigation.tabs
-    - navigation.instant
-    - navigation.footer
-  palette:
-    - scheme: default
-      primary: teal
-      accent: light blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-    - scheme: slate
-      primary: teal
-      accent: light blue
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to light mode
 
 #=======    Website Navigation settings   =====
 nav:
@@ -92,6 +151,8 @@ markdown_extensions:
 plugins:
   - search
   - include-markdown
+  - minify:
+    - minify_html: true
   - mkdocstrings:
       default_handler: python
       handlers:
@@ -108,10 +169,16 @@ plugins:
             show_signature_annotations: false
             signature_crossrefs: true
 
+# Hooks
+hooks:
+  - material/overrides/hooks/shortcodes.py
+  - material/overrides/hooks/translations.py
+
 extra:
   icons:
     - material
     - path: assets/icons
-
+extra_css:
+  - styles.css
 
 copyright: © Copyright 2022-2025, Scientific Software Center team.

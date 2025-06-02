@@ -1,5 +1,9 @@
-# Scientific Software Center - Resource Hub
-This is the main documentation page.
+---
+template: home.html
+title: Material for MkDocs
+social:
+  cards_layout_options:
+    title: Documentation that simply works
+---
 
-
-TODO: Add more information
+Welcome to Material for MkDocs.
