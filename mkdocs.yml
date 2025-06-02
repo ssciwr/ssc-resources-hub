@@ -2,63 +2,31 @@ site_name: Scientific Software Center - Resource Hub
 site_url: https://ecarrenolozano.github.io/ssc-software-engineering-resources
 site_author: Scientific Software Center - Heidelberg University
 site_description: >-
-  A central hub for researchers at the University of Heidelberg who develop software 
-  — offering curated guidelines, courses, templates, and best practices to support
-  reproducible, sustainable, and high-quality scientific software development.
-
-
-
+  A dedicated resource hub for Heidelberg University researchers developing
+  scientific software — offering structured guidelines, training, templates,
+  and best practices to ensure reproducible, sustainable, and high-quality research
+  outputs.
 
 theme:
   name: material
-  custom_dir: material/overrides  
+  custom_dir: material/overrides
   features:
-  #  - content.code.copy
-  #  - content.action.edit
-  #  - navigation.tabs
-  #  - navigation.instant
-  #  - navigation.footer
     - announce.dismiss
     - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    # - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    # - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
-  
-  #palette:
-    # - scheme: default
-    #   primary: teal
-    #   accent: light blue
-    #   toggle:
-    #     icon: material/toggle-switch
-    #     name: Switch to dark mode
-    # - scheme: slate
-    #   primary: teal
-    #   accent: light blue
-    #   toggle:
-    #     icon: material/toggle-switch-off
-    #     name: Switch to light mode
 
   palette:
     - media: "(prefers-color-scheme)"
@@ -90,14 +58,11 @@ theme:
 nav:
   - Home: index.md
 
-  - Start Here:
-    - Software Engineering at a glance: learn/explanation/software-engineering-intro.md
-
   - SSC Coding Guidelines: 
     - twin-repos/guidelines/README.md
 
   - Courses:
-    - learn/on-demand-courses/index.md
+      - learn/on-demand-courses/index.md
 
   - Lunch Python: 
     - twin-repos/lunch-python/README.md
@@ -110,10 +75,9 @@ nav:
     - resources/ssc-templates/python-templates.md
 
   - About:
-    - Project: 
-      - ssc-resource-hub-project/project.md
-      - Design philosophy: ssc-resource-hub-project/design-philosophy.md
-      - Use Cases: ssc-resource-hub-project/use-cases.md
+      - ssc-resource-hub/project.md
+      - Design philosophy: ssc-resource-hub/design-philosophy.md
+      - Use Cases: ssc-resource-hub/use-cases.md
       - About: about.md
   - Community:
     - Join Us: community/index.md
@@ -126,10 +90,13 @@ nav:
 #=======    Extension settings (sorted alphabetically)  =====
 markdown_extensions:
   - admonition
+  - abbr
   - attr_list
+  - def_list
   - md_in_html
   #----- Python Markdown Extensions
   - pymdownx.details
+
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -152,7 +119,7 @@ plugins:
   - search
   - include-markdown
   - minify:
-    - minify_html: true
+      minify_html: true
   - mkdocstrings:
       default_handler: python
       handlers:
@@ -178,7 +145,5 @@ extra:
   icons:
     - material
     - path: assets/icons
-extra_css:
-  - styles.css
 
 copyright: © Copyright 2022-2025, Scientific Software Center team.

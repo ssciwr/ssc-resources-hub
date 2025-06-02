@@ -43,7 +43,7 @@ docs = [
     "pymdown-extensions>=10.15",
     "mkdocstrings[python]>=0.29.1,<0.30",
     "mkdocs-include-markdown-plugin",
-    "mkdocs-minify-plugin"
+    "mkdocs-minify-plugin~=0.7"
 ]
 
 #===================================
