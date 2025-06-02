@@ -12,15 +12,15 @@ form fully to ensure others and the core development team can fully understand
 the scope of the issue. If your category is not listed, you can create a blank
 issue.
 
-The issue will then show up to the omnicache community and be open to
+The issue will then show up to the ssc-resource-hub community and be open to
 comments/ideas from others.
 
 ### Categories
 
-- [Bug Report](https://www.google.com): Report incorrect behavior in the omnicache library
-- [Register New Component](https://www.google.com): Register a new component in the omnicache ecosystem, either one you have created, or one that you would like to see added
+- [Bug Report](https://www.google.com): Report incorrect behavior in the ssc-resource-hub library
+- [Register New Component](https://www.google.com): Register a new component in the ssc-resource-hub ecosystem, either one you have created, or one that you would like to see added
 - Documentation Improvement: Report wrong or missing documentation
-- Feature Request: Suggest an idea for omnicache
+- Feature Request: Suggest an idea for ssc-resource-hub
 
 ## :octicons-checklist-24:{ .lg .middle } Detailed Guides
 

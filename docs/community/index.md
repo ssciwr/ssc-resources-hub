@@ -1,4 +1,4 @@
-Welcome to the omnicache community! We follow open-source principles and
+Welcome to the ssc-resource-hub community! We follow open-source principles and
 encourage any sort of contribution. We communicate on GitHub, where we also
 organise our projects.
 
@@ -18,8 +18,8 @@ organise our projects.
 
 ## Contributing Guidelines GitHub Links
 
-- [Contribution guidelines](https://github.com/omnicache/omnicache/blob/main/CONTRIBUTING.md)
+- [Contribution guidelines](https://github.com/ssc-resource-hub/ssc-resource-hub/blob/main/CONTRIBUTING.md)
 
-- [Code of Conduct](https://github.com/omnicache/omnicache/blob/main/CODE_OF_CONDUCT.md)
+- [Code of Conduct](https://github.com/ssc-resource-hub/ssc-resource-hub/blob/main/CODE_OF_CONDUCT.md)
 
-- [Developer Guide](https://github.com/omnicache/omnicache/blob/main/DEVELOPER.md)
+- [Developer Guide](https://github.com/ssc-resource-hub/ssc-resource-hub/blob/main/DEVELOPER.md)

@@ -2,6 +2,7 @@ site_name: Scientific Software Center - Resource Hub
 site_url: https://ecarrenolozano.github.io/ssc-software-engineering-resources
 theme:
   name: material
+  #custom_dir: docs/overrides/
   font:
     text: Lato
     code: Roboto Mono
@@ -50,11 +51,11 @@ nav:
     - resources/ssc-templates/python-templates.md
 
   - About:
-    - Project: omnicache-project/project.md
-    - Design philosophy: omnicache-project/design-philosophy.md
-    - Use Cases: omnicache-project/use-cases.md
-    - About: about.md
-
+    - Project: 
+      - ssc-resource-hub-project/project.md
+      - Design philosophy: ssc-resource-hub-project/design-philosophy.md
+      - Use Cases: ssc-resource-hub-project/use-cases.md
+      - About: about.md
   - Community:
     - Join Us: community/index.md
     - Where to Start: community/contribute.md

@@ -9,7 +9,7 @@ build-backend = "hatchling.build"
 #=======       PROJECT      ========
 #===================================
 [project]
-name = "omnicache"
+name = "ssc-resource-hub"
 version = "0.0.1"
 description = "A great new project"
 license = "MIT"
@@ -49,7 +49,7 @@ docs = [
 #=======        TOOL        ========
 #===================================
 [tool.hatch.build.targets.wheel]
-packages = ["omnicache"]
+packages = ["ssc-resource-hub"]
 
 
 
