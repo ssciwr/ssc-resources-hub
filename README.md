@@ -17,7 +17,7 @@ git submodule update --init --recursive
 3. Create and activate a virtual environment with uv
 ```bash
 uv venv
-source .venv/bin/activate.py
+source .venv/bin/activate
 ```
 
 4. Install dependencies
