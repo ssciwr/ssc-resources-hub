@@ -962,6 +962,7 @@ name = "ssc-resource-hub"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [
+    { name = "mkdocs-include-markdown-plugin" },
     { name = "toml" },
 ]
 
@@ -984,6 +985,7 @@ docs = [
 requires-dist = [
     { name = "bump2version", marker = "extra == 'dev'" },
     { name = "distlib", marker = "extra == 'dev'" },
+    { name = "mkdocs-include-markdown-plugin", specifier = ">=7.1.5" },
     { name = "mkdocs-include-markdown-plugin", marker = "extra == 'docs'" },
     { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.6.14" },
     { name = "mkdocs-minify-plugin", marker = "extra == 'docs'", specifier = "~=0.7" },
