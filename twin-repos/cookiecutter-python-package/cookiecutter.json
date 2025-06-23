@@ -1,0 +1,18 @@
+{
+    "project_name": "My Project",
+    "remote_url": "None",
+    "project_slug": "{%- if cookiecutter.remote_url == 'None' -%}{{ cookiecutter.project_name|replace('+', 'p')|slugify }}{% else %}{{ cookiecutter.remote_url.split('/')[-1]|replace('.git', '')}}{%- endif -%}",
+    "full_name": "Your Name",
+    "license": ["MIT", "BSD-2", "GPL-3.0", "LGPL-3.0", "None"],
+    "github_actions_ci": ["Yes", "No"],
+    "gitlab_ci": ["Yes", "No"],
+    "notebooks": ["Yes", "No"],
+    "commandlineinterface": ["No", "Yes"],
+    "version_management": ["manually", "setuptools_scm"],
+    "_extensions": [
+        "local_extensions.PrecommitExtension",
+        "local_extensions.ShortcutExtension",
+        "local_extensions.CurrentDateExtension"
+    ],
+    "__modname": "{{ cookiecutter|modname }}"
+}
