@@ -68,6 +68,8 @@ nav:
     - twin-repos/lunch-python/README.md
 
   - Templates:
+    - Only SSC members:
+      - resources/ssc-templates/documentation-templates.md
     - resources/ssc-templates/cpp-templates.md
     - resources/ssc-templates/fortran-templates.md
     - resources/ssc-templates/jupyter-templates.md
