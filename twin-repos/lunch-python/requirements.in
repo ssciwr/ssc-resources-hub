@@ -1,0 +1,35 @@
+requests
+bs4
+pyyaml
+sympy
+symengine
+numpy
+jupyter
+rise
+click
+pytest
+ipytest
+pillow
+jinja2
+numba
+cython
+pybind11
+matplotlib
+git+https://github.com/aldanor/ipybind.git
+git+https://github.com/mgaitan/fortran_magic.git
+pickleshare  # required by fortran_magic
+ipywidgets
+mypy
+nb_mypy
+torch
+torchvision
+spacy
+en_core_web_md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1-py3-none-any.whl
+dash
+jupyter-dash
+dash-extensions
+pandas
+pydantic
+fastapi[standard]
+sqlmodel
+argon2-cffi

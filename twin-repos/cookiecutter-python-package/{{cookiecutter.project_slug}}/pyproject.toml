@@ -1,0 +1,102 @@
+# This section describes the requirements of the build/installation
+# process itself. Being able to do this was the original reason to
+# introduce pyproject.toml
+[build-system]
+requires = [
+    "setuptools >=61",
+{%- if cookiecutter.version_management == "setuptools_scm" %}
+    "setuptools_scm >=7",
+{%- endif %}
+]
+build-backend = "setuptools.build_meta"
+
+# This section provides general project metadata that is used across
+# a variety of build tools. Notably, the version specified here is the
+# single source of truth for {{ cookiecutter|modname }}'s version
+[project]
+name = "{{ cookiecutter|modname }}"
+description = "Add short description here"
+readme = "README.md"
+maintainers = [
+    { name = "{{ cookiecutter.full_name}}", email = "your@email.com" },
+]
+{%- if cookiecutter.version_management == "setuptools_scm" %}
+dynamic = ["version"]
+{%- else %}
+version = "0.0.1"
+{%- endif %}
+requires-python = ">=3.8"
+{%- if cookiecutter.license != "None" %}
+license = { text = "{{ cookiecutter.license }}" }
+{%- endif %}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+{%- if cookiecutter.license == "MIT" %}
+    "License :: OSI Approved :: MIT License",
+{%- elif cookiecutter.license == "BSD-2" %}
+    "License :: OSI Approved :: BSD License",
+{%- elif cookiecutter.license == "GPL-3.0" %}
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+{%- elif cookiecutter.license == "LGPL-3.0" %}
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+{%- endif %}
+]
+dependencies = [
+{%- if cookiecutter.commandlineinterface == "Yes" %}
+    "click",
+{%- endif %}
+]
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+    "pytest-cov",
+{%- if cookiecutter.notebooks == "Yes" %}
+    "nbval",
+{%- endif %}
+]
+docs = [
+{%- if cookiecutter.notebooks == "Yes" %}
+    "ipykernel",
+{%- endif %}
+{%- if cookiecutter.notebooks == "Yes" %}
+    "nbsphinx",
+    "nbsphinx-link",
+{%- endif %}
+    "sphinx",
+    "sphinx_mdinclude",
+    "sphinx_rtd_theme",
+]
+{% if cookiecutter.commandlineinterface == "Yes" %}
+# Command line scripts installed as part of the installation
+[project.scripts]
+{{ cookiecutter|modname }} = "{{ cookiecutter|modname }}.__main__:main"
+{%- endif%}
+
+# The following section contains setuptools-specific configuration
+# options. For a full reference of available options, check the overview
+# at https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[tool.setuptools]
+packages = [
+    "{{ cookiecutter|modname }}",
+]
+{%- if cookiecutter.version_management == "setuptools_scm" %}
+
+# Configure setuptools_scm, which extracts the version number from
+# the version control system. For more information see its documentation:
+# https://github.com/pypa/setuptools_scm
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+write_to = "{{ cookiecutter|modname }}/_version.py"
+{%- endif %}
+
+# The following is the configuration for the pytest test suite
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+{%- if cookiecutter.notebooks == "Yes" %}
+    "notebooks",
+{%- endif %}
+]
