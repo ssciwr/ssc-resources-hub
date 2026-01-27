@@ -1,8 +1,8 @@
 # List of available courses 
 
 ## Artificial Intelligence
-- AI in research software: Best practices for developing and using ML models
-- Generative AI for writing (research) software
+- [AI in research software: Best practices for developing and using ML models](https://ssciwr.github.io/machine-learning-based-research-software-course/)
+- [Generative AI for writing (research) software](https://ssciwr.github.io/generative-AI-coding-course/)
 
 ---
 
@@ -43,7 +43,7 @@
 - [Python Packaging](https://ssciwr.github.io/python-packaging/)
 
 ### Testing
-- Introduction to Python testing
+- [Introduction to Python testing](https://ssciwr.github.io/python-testing-intro/)
 - [Effective Software Testing in Python](https://ssciwr.github.io/effective-software-testing/)
 
 ---
