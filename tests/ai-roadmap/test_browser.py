@@ -239,6 +239,7 @@ def test_unassigned_instructor_placeholder(roadmap):
 @pytest.mark.parametrize("width", [320, 390, 768, 1440])
 def test_responsive_layout(roadmap, width):
     roadmap.set_viewport_size({"width": width, "height": 900})
+    roadmap.locator("#goal").select_option("LG-05")
     roadmap.get_by_role("button", name="Fit map", exact=True).click()
     assert roadmap.evaluate("document.documentElement.scrollWidth <= innerWidth")
     expect(roadmap.locator(".course-link:visible")).to_have_count(29)

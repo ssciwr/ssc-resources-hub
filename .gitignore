@@ -1,2 +1,7 @@
 .venv
 test-results/
+/site/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/

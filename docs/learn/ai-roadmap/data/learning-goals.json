@@ -1,8 +1,8 @@
 {
   "F": "Shared foundations",
-  "LG-01": "Understand AI",
-  "LG-02": "Apply AI in research",
-  "LG-03": "Develop software with AI",
-  "LG-04": "Develop AI applications",
-  "LG-05": "Use, evaluate and deploy AI models"
+  "LG-01": "Understand AI and assess its potential",
+  "LG-02": "Use AI effectively in research",
+  "LG-03": "Develop reliable software with AI",
+  "LG-04": "Develop applications that incorporate AI",
+  "LG-05": "Use, evaluate and deploy AI/ML models"
 }
