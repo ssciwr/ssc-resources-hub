@@ -13,13 +13,6 @@ ROOT = Path(__file__).resolve().parents[2]
 PREFIX = "/ssc-resources-hub/"
 
 
-def pytest_addoption(parser):
-    parser.addoption(
-        "--roadmap-site-dir",
-        help="Reuse an existing MkDocs build instead of building into a temporary directory",
-    )
-
-
 class ProjectSiteHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if not self.path.startswith(PREFIX):

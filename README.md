@@ -143,7 +143,10 @@ uv run --no-sync pytest tests/ai-roadmap -m browser --browser chromium
 
 Tests build the complete MkDocs site into a temporary directory and serve it on
 localhost under `/ssc-resources-hub/`, exercising project-site asset paths. To
-reuse a fresh existing build, add `--roadmap-site-dir site`. Curriculum and
+reuse a fresh existing build from the repository root, run
+`uv run --no-sync pytest -m browser --roadmap-site-dir=site`. Use the `=...` form
+for external build directories too, such as `--roadmap-site-dir=/tmp/roadmap-site`,
+so pytest keeps the build path separate from test discovery. Curriculum and
 browser tests can also be run together by omitting `-m browser` after installing
 Chromium. Tests use the actual modules and JSON over HTTP; external services are
 blocked, and avatar rendering uses deterministic responses. The multiple-profile

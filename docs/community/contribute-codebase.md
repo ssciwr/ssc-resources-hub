@@ -100,7 +100,9 @@ uv run --no-sync pytest -m browser -q
 Run both suites with `uv run --no-sync pytest`. Default discovery is restricted
 to `tests/`, excluding tests belonging to documentation submodules and generated
 site files. Browser tests build and serve the actual MkDocs site locally; to
-reuse a fresh build, add `--roadmap-site-dir site`.
+reuse a fresh build from the repository root, run
+`uv run --no-sync pytest -m browser --roadmap-site-dir=site`. Use the `=...` form
+when passing an external build directory as well.
 
 The existing tests can also help you to understand how the code works. If you
 have any questions, please feel free to ask them in the issue tracker or on
