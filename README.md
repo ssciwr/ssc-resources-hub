@@ -88,6 +88,28 @@ browser. New SVG features require a matching review of the schema and
 `js/svg-policy.js`. These boundaries follow the context-specific approach in
 [OWASP's XSS prevention guidance](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html).
 
+## Course specification gaps
+
+Generate a contributor report from the validated curriculum:
+
+```bash
+uv run --no-sync python scripts/report_ai_roadmap_readiness.py
+uv run --no-sync python scripts/report_ai_roadmap_readiness.py --mvp
+```
+
+Add `--json` for structured output. The report lists missing instructor assignments,
+projects and acceptance criteria. It checks the existing data without writing any
+files or changing course scope. Both CLI alternatives remain separate options.
+It exits successfully for valid drafts even when fields remain incomplete.
+Missing optional fields are prompts for author review, not additional schema
+requirements or release gates.
+
+Complete fields and material-coverage labels do not establish teaching readiness.
+Exercise execution, dataset/model licensing, four-hour feasibility, project scope,
+cross-cutting competencies and references need documented author review. Follow
+the [course authoring guide](docs/community/contribute-codebase.md#ai-roadmap-course-specifications)
+to supply confirmed content and review evidence.
+
 ## Browser regression tests
 
 The browser suite uses [Playwright's pytest plugin](https://playwright.dev/python/docs/test-runners)

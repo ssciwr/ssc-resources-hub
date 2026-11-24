@@ -109,6 +109,43 @@ Zulip.
 **Before submitting a pull request, please make sure that all tests pass and
 that the documentation builds correctly.**
 
+## AI Roadmap course specifications
+
+Use the draft specification report to choose a course to complete:
+
+```bash
+uv run --no-sync python scripts/report_ai_roadmap_readiness.py --mvp
+```
+
+The report distinguishes missing fields from teaching readiness. A course with
+complete JSON fields still needs review of its exercises, licensing and timing;
+material-coverage labels describe potential reuse rather than readiness to teach.
+
+For a course-content contribution:
+
+1. Preserve the approved objective, learning outcomes, scope, release selection
+   and prerequisites unless the curriculum change is explicitly reviewed.
+2. Add confirmed instructor IDs to the course's `instructors` array. Reuse profiles
+   in `data/instructors.json`; provide verified details for new profiles.
+3. Where practical projects are planned, supply `practice` and `acceptance`
+   together, with at most two small projects and measurable checks. Preserve the
+   equivalence of the CLI options.
+4. Provide public, versioned exercise assets and reproducible setup instructions.
+   Record dataset/model provenance, versions and applicable reuse rights in the
+   exercise documentation, and provide evidence of an independent trial run.
+5. Document a delivery trial within four hours and map the four cross-cutting
+   competencies to concrete activities. Review course-specific IEEE references
+   and reuse entries from `data/bibliography.json` where appropriate.
+6. Include review evidence with the pull request, run curriculum validation and
+   tests, and build the documentation. Keep tutor-only materials in their private
+   destination.
+
+Paths beginning with `data/` are relative to `docs/learn/ai-roadmap/`. The current
+course schema does not track exercise execution, licensing or delivery-review
+evidence. Supply that evidence in the exercise documentation and pull request;
+propose schema changes explicitly before introducing new course fields. The
+report remains advisory and does not mark courses as ready or change MVP choices.
+
 ## Versioning
 
 We use [semantic versioning](https://semver.org/) for the project. This means
