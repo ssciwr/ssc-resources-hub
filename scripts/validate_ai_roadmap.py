@@ -6,10 +6,13 @@ This validates publication structure, not the sensitivity of prose or teaching r
 
 import argparse
 import json
+import re
 from collections import Counter, defaultdict
 from functools import lru_cache
 from graphlib import CycleError, TopologicalSorter
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from jsonschema import Draft202012Validator
 
@@ -70,6 +73,66 @@ def validate_document(filename, name, document):
     if error:
         pointer = "/".join(str(part) for part in error.absolute_path)
         raise ValueError(f"{filename}/{pointer}: {error.message}")
+
+
+def validate_https_url(value, location):
+    require(not re.search(r'[\s\x00-\x1f\x7f<>"\\]', value), location,
+            "HTTPS URLs cannot contain whitespace, controls, quotes or backslashes")
+    try:
+        url = urlsplit(value)
+        _ = url.port  # Accessing the property validates syntax and range.
+        valid = url.scheme == "https" and url.hostname and url.username is None and url.password is None
+    except ValueError as error:
+        raise ValueError(f"{location}: Invalid HTTPS URL") from error
+    require(valid, location, "A complete HTTPS URL without embedded credentials is required")
+
+
+class CitationMarkup(HTMLParser):
+    """Allow only balanced, attribute-free emphasis in bibliography citations."""
+
+    def __init__(self, location):
+        super().__init__(convert_charrefs=False)
+        self.location = location
+        self.depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        require(tag == "em" and not attrs and self.get_starttag_text().lower() == "<em>",
+                self.location, "Citations support only attribute-free <em> markup")
+        self.depth += 1
+
+    def handle_endtag(self, tag):
+        require(tag == "em" and self.depth > 0, self.location, "Unbalanced citation markup")
+        self.depth -= 1
+
+    def handle_startendtag(self, tag, attrs):
+        raise ValueError(f"{self.location}: Self-closing citation markup is unsupported")
+
+    def handle_comment(self, data):
+        raise ValueError(f"{self.location}: Citation comments are unsupported")
+
+    def handle_decl(self, decl):
+        raise ValueError(f"{self.location}: Citation declarations are unsupported")
+
+    def handle_pi(self, data):
+        raise ValueError(f"{self.location}: Citation processing instructions are unsupported")
+
+    def unknown_decl(self, data):
+        raise ValueError(f"{self.location}: Unsupported citation declaration")
+
+
+def validate_content(documents):
+    for key, reference in documents["bibliography.json"].items():
+        location = f"bibliography.json/{key}"
+        if reference["url"]:
+            validate_https_url(reference["url"], location + "/url")
+        parser = CitationMarkup(location + "/citation")
+        parser.feed(reference["citation"])
+        parser.close()
+        require(parser.depth == 0, location, "Unclosed citation emphasis")
+    for key, instructor in documents["instructors.json"].items():
+        for field in ("github", "source", "avatar"):
+            if field in instructor:
+                validate_https_url(instructor[field], f"instructors.json/{key}/{field}")
 
 
 def validate_references(documents):
@@ -249,6 +312,7 @@ def validate_curriculum(data_dir=DATA):
     files = {path.relative_to(data_dir).as_posix() for path in data_dir.rglob("*") if path.is_file()}
     require(not files - expected, data_dir, f"Unexpected public data files: {sorted(files - expected)}")
     validate_schemas(documents)
+    validate_content(documents)
     validate_references(documents)
     ids = documents["roadmap.json"]["course_ids"]
     dependencies = documents["dependencies.json"]

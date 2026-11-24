@@ -253,6 +253,17 @@
       },
       "additionalProperties": {
         "$ref": "#/$defs/text"
+      },
+      "properties": {
+        "fill": {
+          "$ref": "#/$defs/svg-colour"
+        },
+        "stroke": {
+          "$ref": "#/$defs/svg-colour"
+        },
+        "marker-end": {
+          "$ref": "#/$defs/svg-marker"
+        }
       }
     },
     "element": {
@@ -351,6 +362,14 @@
         "elements"
       ],
       "additionalProperties": false
+    },
+    "svg-colour": {
+      "type": "string",
+      "pattern": "^(?:[a-zA-Z]+|#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8}))$"
+    },
+    "svg-marker": {
+      "type": "string",
+      "pattern": "^(?:none|url\\(#[a-zA-Z][a-zA-Z0-9_.:-]*\\))$"
     }
   }
 }

@@ -72,6 +72,22 @@ against accidental extra fields or files; it cannot determine whether prose in
 an allowed field is confidential. Publication rights, teaching readiness, actual
 SVG arrow geometry, and assistive-technology behavior require separate review.
 
+Curriculum fields render as plain text, with escaped values in HTML attributes.
+Bibliography citations additionally support balanced, attribute-free `<em>` tags;
+the renderer builds those spans from text nodes rather than accepting general
+HTML. Other citation markup fails validation and appears literally if validation
+is bypassed. External links and avatars require complete HTTPS URLs without
+embedded credentials, controls, quotes, or backslashes; invalid URLs are omitted.
+Avatar errors use event listeners and retain the initials fallback.
+
+The SVG renderer enforces a tag and attribute allowlist before mounting the map.
+Colours use literal names or hexadecimal values, and markers reference local SVG
+IDs. Script tags, event attributes, inline styles, and external paint references
+fail validation and produce a visible load error if supplied directly to the
+browser. New SVG features require a matching review of the schema and
+`js/svg-policy.js`. These boundaries follow the context-specific approach in
+[OWASP's XSS prevention guidance](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html).
+
 ## Browser regression tests
 
 The browser suite uses [Playwright's pytest plugin](https://playwright.dev/python/docs/test-runners)

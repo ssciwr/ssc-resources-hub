@@ -1,10 +1,10 @@
-import {$,root} from './dom.js';
+import {$,root,escapeHtml} from './dom.js';
 import {courses,goals,roles,audienceHelp,edges} from './data-loader.js';
 import {highlight} from './graph.js';
 import {renderCatalogue} from './catalogue.js';
 for(const [id,label] of Object.entries(goals))$('goal').add(new Option(id==='F'?label:id+' · '+label,id));
 const audienceChoices=[['','All learners','Show the complete roadmap'],...Object.entries(roles).map(([id,label])=>[id,label,audienceHelp[id]])];
-for(const [id,label,help] of audienceChoices){const item=document.createElement('label');item.className='audience-option';item.innerHTML=`<input type="radio" name="audienceChoice" value="${id}" ${id===''?'checked':''}><span><strong>${label}</strong><small>${help}</small></span>`;$('learners').append(item);item.querySelector('input').addEventListener('change',()=>{setAudience(id);refresh()});item.addEventListener('click',e=>{if(e.target.matches('input')&&e.detail>0){setAudience(id);closeAudience(true);refresh()}})}
+for(const [id,label,help] of audienceChoices){const item=document.createElement('label');item.className='audience-option';item.innerHTML=`<input type="radio" name="audienceChoice" value="${escapeHtml(id)}" ${id===''?'checked':''}><span><strong>${escapeHtml(label)}</strong><small>${escapeHtml(help)}</small></span>`;$('learners').append(item);item.querySelector('input').addEventListener('change',()=>{setAudience(id);refresh()});item.addEventListener('click',e=>{if(e.target.matches('input')&&e.detail>0){setAudience(id);closeAudience(true);refresh()}})}
 function setAudience(id){$('role').value=id;const label=roles[id]||'All learners';$('roleLabel').textContent=label;$('roleToggle').setAttribute('aria-label','Intended audience: '+label);for(const radio of $('learners').querySelectorAll('input'))radio.checked=radio.value===id;}
 function closeAudience(focus=false){$('audienceOptions').hidden=true;$('roleToggle').setAttribute('aria-expanded','false');if(focus)$('roleToggle').focus()}
 $('roleToggle').addEventListener('click',()=>{if(!$('audienceOptions').hidden){closeAudience();return}$('audienceOptions').hidden=false;$('roleToggle').setAttribute('aria-expanded','true');$('learners').querySelector('input:checked').focus()});

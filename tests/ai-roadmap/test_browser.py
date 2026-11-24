@@ -375,3 +375,133 @@ def test_conditional_only_prerequisite_does_not_say_none(roadmap):
     open_course(roadmap, "U01")
     expect(roadmap.locator(".prereq-card .empty-list")).to_have_count(0)
     expect(roadmap.locator('.prereq-card .conditional-relation [data-open="M03"]')).to_have_count(1)
+
+
+INJECTION_TEXT = '<img data-injected src="data:," onerror="window.__roadmapXss = true">'
+
+
+def reload_records(page, records):
+    for filename, record in records.items():
+        page.route(f"**/data/{filename}", lambda route, request, value=record: route.fulfill(json=value))
+    page.reload(wait_until="domcontentloaded")
+    expect(page.locator("#catalogue tr")).to_have_count(29)
+
+
+def assert_no_injected_markup(page):
+    expect(page.locator("[data-injected]")).to_have_count(0)
+    assert page.evaluate("window.__roadmapXss === undefined")
+
+
+def test_course_content_is_rendered_as_text(roadmap):
+    course = {**COURSES["A01"]}
+    for field in ["name", "description", "coverage", "courseType", "prerequisiteRationale", "practice", "acceptance"]:
+        course[field] = INJECTION_TEXT
+    for field in ["prior", "learn", "tools", "modules", "moduleDescriptions"]:
+        course[field] = [INJECTION_TEXT]
+    reload_records(roadmap, {"courses/A01.json": course})
+    expect(roadmap.locator('#catalogue [data-open="A01"]')).to_have_text(INJECTION_TEXT)
+    roadmap.locator('.course-link[data-id="A01"] rect').click()
+    expect(roadmap.locator("#detailTitle")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".description-copy")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".module-copy strong")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".module-copy small")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator("#detail .tools li")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".prereq-note").first).to_contain_text(INJECTION_TEXT)
+    assert_no_injected_markup(roadmap)
+
+
+def test_audience_goal_and_instructor_fields_are_text(roadmap):
+    audiences = json.loads((DATA / "audiences.json").read_text())
+    audiences["technical"] = {"label": INJECTION_TEXT, "help": INJECTION_TEXT}
+    goals = json.loads((DATA / "learning-goals.json").read_text())
+    goals["LG-04"] = INJECTION_TEXT
+    instructor = {**INSTRUCTOR}
+    for field in ["name", "initials", "position", "affiliation", "githubHandle"]:
+        instructor[field] = INJECTION_TEXT
+    reload_records(roadmap, {"audiences.json": audiences, "learning-goals.json": goals,
+                            "instructors.json": {"lkeegan": instructor}})
+    roadmap.locator("#roleToggle").click()
+    option = roadmap.locator(".audience-option").filter(has=roadmap.locator('input[value="technical"]'))
+    expect(option.locator("strong")).to_have_text(INJECTION_TEXT)
+    expect(option.locator("small")).to_have_text(INJECTION_TEXT)
+    option.get_by_role("radio").check()
+    expect(roadmap.locator("#roleLabel")).to_have_text(INJECTION_TEXT)
+    open_course(roadmap, "A01")
+    expect(roadmap.locator("#detailMeta")).to_contain_text(INJECTION_TEXT)
+    roadmap.locator("#close").click()
+    open_course(roadmap, "S03")
+    expect(roadmap.locator(".instructor-info strong")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".instructor-position")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".instructor-info small")).to_have_text(INJECTION_TEXT)
+    expect(roadmap.locator(".instructor-avatar > span")).to_have_text(INJECTION_TEXT)
+    assert_no_injected_markup(roadmap)
+
+
+def test_bibliography_preserves_only_emphasis_markup(roadmap):
+    bibliography = json.loads((DATA / "bibliography.json").read_text())
+    bibliography["httpx"]["citation"] = f'Citation <em>Allowed & correct</em> {INJECTION_TEXT}'
+    reload_records(roadmap, {"bibliography.json": bibliography})
+    open_course(roadmap, "A01")
+    reference = roadmap.locator(".bib-list > li").first
+    expect(reference.locator("em")).to_have_text("Allowed & correct")
+    expect(reference).to_contain_text(INJECTION_TEXT)
+    assert_no_injected_markup(roadmap)
+
+
+@pytest.mark.parametrize("url", [
+    "javascript:window.__roadmapXss=true", "data:text/html,unsafe", "//example.org/unsafe",
+    "https://user:password@example.org/", "https://example.org:invalid/", "https:///",
+    "https://example.org/\nunsafe", 'https://example.org/"onmouseover="unsafe',
+])
+def test_unsafe_external_urls_are_not_rendered(roadmap, url):
+    bibliography = json.loads((DATA / "bibliography.json").read_text())
+    bibliography["httpx"]["url"] = url
+    instructor = {**INSTRUCTOR, "github": url, "source": url, "avatar": url}
+    reload_records(roadmap, {"bibliography.json": bibliography,
+                            "instructors.json": {"lkeegan": instructor}})
+    open_course(roadmap, "A01")
+    expect(roadmap.locator(".bib-list > li").first.locator("a")).to_have_count(0)
+    roadmap.locator("#close").click()
+    open_course(roadmap, "S03")
+    expect(roadmap.locator(".instructor-links a")).to_have_count(0)
+    expect(roadmap.locator(".instructor-avatar img")).to_have_count(0)
+    expect(roadmap.locator(".instructor-avatar > span")).to_be_visible()
+    assert_no_injected_markup(roadmap)
+
+
+def test_https_reference_query_is_preserved(roadmap):
+    url = "https://example.org/read?author=O%27Brien&title=%22quoted%22"
+    bibliography = json.loads((DATA / "bibliography.json").read_text())
+    bibliography["httpx"]["url"] = url
+    reload_records(roadmap, {"bibliography.json": bibliography})
+    open_course(roadmap, "A01")
+    expect(roadmap.locator(".bib-list > li").first.locator("a")).to_have_attribute("href", url)
+
+
+@pytest.mark.parametrize("change", [
+    lambda d: d["svg"].update(onload="window.__roadmapXss=true"),
+    lambda d: d["elements"].append({"tag": "script", "attrs": {}, "text": "window.__roadmapXss=true"}),
+    lambda d: d["elements"][1]["attrs"].update(style="background:url(https://example.org/unsafe)"),
+    lambda d: d["elements"][1]["attrs"].update(fill="url(https://example.org/unsafe)"),
+    lambda d: d["elements"][1]["attrs"].update({"marker-end": "url(javascript:unsafe)"}),
+])
+def test_unsafe_svg_layout_fails_closed(page, roadmap_url, change):
+    layout = json.loads((DATA / "layout.json").read_text())
+    change(layout)
+    origin = urlsplit(roadmap_url).netloc
+    page.route("**/*", lambda route: route.continue_()
+               if urlsplit(route.request.url).netloc == origin else route.abort())
+    page.route("**/data/layout.json", lambda route: route.fulfill(json=layout))
+    page.goto(roadmap_url, wait_until="domcontentloaded")
+    expect(page.locator("#roadmapError")).to_be_visible()
+    expect(page.locator("#overview")).to_have_count(0)
+    assert_no_injected_markup(page)
+
+
+@pytest.mark.parametrize("fragment", ["constructor", "__proto__"])
+def test_noncourse_hash_does_not_open_dialog(roadmap, roadmap_url, fragment):
+    roadmap.goto("about:blank")
+    roadmap.goto(roadmap_url + "#" + fragment, wait_until="domcontentloaded")
+    expect(roadmap.locator("#catalogue tr")).to_have_count(29)
+    expect(roadmap.locator("#detail")).to_be_hidden()
+    expect(roadmap.locator("#roadmapError")).to_be_hidden()

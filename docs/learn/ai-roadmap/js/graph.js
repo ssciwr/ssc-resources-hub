@@ -1,5 +1,6 @@
 import {layout, byId, edges} from './data-loader.js';
 import {$} from './dom.js';
+import {assertSafeSvg} from './svg-policy.js';
 const ns='http://www.w3.org/2000/svg';
 function make(spec){
   const node=document.createElementNS(ns,spec.tag);
@@ -25,7 +26,9 @@ function make(spec){
   return node;
 }
 export const canvas=$('canvas');
-export const overview=make({tag:'svg',attrs:layout.svg,children:layout.elements});
+const spec={tag:'svg',attrs:layout.svg,children:layout.elements};
+assertSafeSvg(spec);
+export const overview=make(spec);
 $('mapMount').replaceWith(overview);
 export function bindGraph(openCourse){
   for(const el of canvas.querySelectorAll('.course-link')){

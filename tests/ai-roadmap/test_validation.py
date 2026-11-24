@@ -258,3 +258,33 @@ def test_cli_reports_invalid_data_without_traceback(curriculum):
     assert result.returncode == 1
     assert "courses/A01.json/learn" in result.stderr
     assert "Traceback" not in result.stderr
+
+
+@pytest.mark.parametrize("url", [
+    "https://user:password@example.org/", "https://example.org:invalid/", "https:///",
+    "https://example.org/\x00unsafe", 'https://example.org/"onmouseover="unsafe',
+    "https://example.org\\unsafe", "https://bad<host>/",
+])
+def test_reject_unsafe_https_urls(curriculum, url):
+    edit(curriculum, "bibliography.json", lambda d: d["httpx"].update(url=url))
+    rejects(curriculum, "bibliography.json")
+
+
+@pytest.mark.parametrize("citation", [
+    '<em onclick="unsafe">Title</em>', '<img src="unsafe">', '<script>unsafe</script>',
+    '<em>Unclosed', '</em>Unopened', '<!-- hidden markup -->',
+])
+def test_reject_unsupported_citation_markup(curriculum, citation):
+    edit(curriculum, "bibliography.json", lambda d: d["httpx"].update(citation=citation))
+    rejects(curriculum, "bibliography.json")
+
+
+@pytest.mark.parametrize("attrs", [
+    {"fill": "url(https://example.org/unsafe)"},
+    {"stroke": "url(javascript:unsafe)"},
+    {"marker-end": "url(https://example.org/unsafe)"},
+    {"onload": "unsafe"},
+])
+def test_reject_unsafe_svg_attributes(curriculum, attrs):
+    edit(curriculum, "layout.json", lambda d: d["elements"][1]["attrs"].update(attrs))
+    rejects(curriculum, "layout.json")
