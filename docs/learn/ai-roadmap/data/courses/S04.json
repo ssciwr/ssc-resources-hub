@@ -1,0 +1,55 @@
+{
+  "id": "S04",
+  "name": "Quality Assurance in the Age of AI",
+  "goal": "LG-03",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Verify software artifacts and agentic processes using appropriate techniques.",
+  "description": "Verify the software product, production process, usage workflow and modifications to the agent harness. Build on test-first development to check behaviour, audit agent actions and evaluate model-based judgments against independent evidence.",
+  "external": "Programming, Git, unit testing and basic software engineering practices.",
+  "prior": [
+    "Programming and Git",
+    "Unit testing",
+    "Software engineering fundamentals"
+  ],
+  "learn": [
+    "Select checks for the four verification targets",
+    "Audit agent actions and review code against independent evidence",
+    "Diagnose failures and evaluate automated judgments"
+  ],
+  "tools": [
+    "Your chosen CLI (Claude Code or Codex)",
+    "pytest",
+    "behave (candidate)",
+    "Agent logs"
+  ],
+  "modules": [
+    "Verification targets and threat boundaries",
+    "Scientific software and code review",
+    "Process, context and harness checks",
+    "Evaluation and failure diagnosis"
+  ],
+  "coverage": "Strong (provisional)",
+  "courseType": "Integration",
+  "moduleDescriptions": [
+    "Map product, process, workflow and harness failures to independent checks.",
+    "Use behavioural tests and a review checklist to catch regressions and unsupported claims.",
+    "Inspect logs, approvals, instruction compliance and a bounded automated check.",
+    "Compare repeated results with reference evidence; diagnose failures and judge disagreement."
+  ],
+  "practice": "Audit a supplied agent-generated scientific code change and its session evidence.",
+  "acceptance": "Identify planted defects or constraint violations; support findings with tests, logs and independent review.",
+  "instructors": [],
+  "references": [
+    "qa",
+    "behave",
+    "aeval",
+    "judge"
+  ],
+  "prerequisiteRationale": "S02 provides context/skill design; S03 provides test-first verification. Both are needed for the four-target QA exercise.",
+  "duration_minutes": 240
+}

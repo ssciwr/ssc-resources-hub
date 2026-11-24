@@ -1,0 +1,55 @@
+{
+  "id": "R02",
+  "name": "Prompting and Evaluating Multimodal AI Models",
+  "goal": "LG-02",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "academic",
+    "technical"
+  ],
+  "outcome": "Design and evaluate a reproducible multimodal AI research workflow.",
+  "description": "Use existing vision-language models to investigate image-based research questions. With AMMICO as the reference implementation, compare prompts and model backends, validate results against human annotations, and export documented results for analysis.",
+  "external": "Basic Python and notebook familiarity; approved endpoint access; ORCID for the Jupyter4NFDI setup.",
+  "prior": [
+    "Basic Python and familiarity with Jupyter notebooks (proposed)",
+    "Access to an approved model endpoint; registered ORCID account if using the Jupyter4NFDI setup"
+  ],
+  "learn": [
+    "Translate research questions into visual prompts and refine them against observed outputs",
+    "Run image summarization or visual question answering in batches and export results",
+    "Compare model and prompt configurations against human-coded references",
+    "Record prompts, model provenance and failures; assess data licensing and confidentiality"
+  ],
+  "tools": [
+    "AMMICO (reference implementation)",
+    "Python and Jupyter",
+    "pandas",
+    "Approved local or institutional model endpoint"
+  ],
+  "modules": [
+    "Vision-language models: capabilities and failure modes",
+    "Prompt design and reproducible workflow setup",
+    "Image batch processing and export with AMMICO",
+    "Comparative evaluation against human annotations"
+  ],
+  "coverage": "Strong (provisional)",
+  "courseType": "Focused",
+  "mapName": "Multimodal AI: Prompting & Evaluation",
+  "moduleDescriptions": [
+    "Identify VLM inputs, outputs, prompt sensitivity and common visual errors.",
+    "Turn research questions into consistent visual questions and configure a model endpoint.",
+    "Run AMMICO on a small image collection and export results to CSV.",
+    "Compare model outputs with human labels; document errors, refusals and provenance."
+  ],
+  "instructors": [],
+  "references": [
+    "ammico",
+    "multimodal",
+    "cards",
+    "era"
+  ],
+  "prerequisiteRationale": "F02 introduces prompt iteration and output verification; R02 extends them to image and text inputs.",
+  "duration_minutes": 240
+}

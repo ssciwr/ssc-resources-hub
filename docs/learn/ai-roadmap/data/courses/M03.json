@@ -1,0 +1,52 @@
+{
+  "id": "M03",
+  "name": "Local LLM Inference",
+  "goal": "LG-05",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Run an existing language model locally and assess resource needs.",
+  "description": "Run a small existing language model in a local inference runtime. Query its endpoint from Python, compare inference settings and resource use, and record the model version, license and runtime configuration.",
+  "external": "Python or CLI, package environments, basic hardware concepts and sufficient local memory for the selected model.",
+  "prior": [
+    "Basic Python and command-line use",
+    "Package environments",
+    "Basic hardware concepts and sufficient local memory"
+  ],
+  "learn": [
+    "Load an existing open-weight LLM and query its local endpoint programmatically",
+    "Compare resource use and quantization trade-offs",
+    "Record model format, settings and performance"
+  ],
+  "tools": [
+    "llama.cpp (candidate)",
+    "GGUF model files",
+    "Python or CLI"
+  ],
+  "modules": [
+    "Model formats and licensing",
+    "Local runtime and hardware",
+    "Quantization and inference settings",
+    "Performance and output comparison"
+  ],
+  "coverage": "Limited",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Compare open-weight model formats, licenses and runtime compatibility.",
+    "Start a local runtime and query its endpoint from Python; inspect CPU/GPU memory use.",
+    "Compare supplied quantized variants and configure decoding settings.",
+    "Measure latency and output quality on a fixed test set and document results."
+  ],
+  "instructors": [],
+  "references": [
+    "llama",
+    "hfgguf",
+    "quant",
+    "modelcardhf"
+  ],
+  "prerequisiteRationale": "A01 supplies programmatic model interaction; M03 shifts the endpoint to a local inference runtime.",
+  "duration_minutes": 240
+}

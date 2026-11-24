@@ -29,12 +29,6 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = [
-    "distlib",
-    "pre-commit>=2.17.0",
-    "bump2version",
-    "twine",
-]
 docs = [
     "mkdocs-material>=9.6.14",
     "pymdown-extensions>=10.15",
@@ -48,6 +42,23 @@ docs = [
 #===================================
 [tool.hatch.build.targets.wheel]
 packages = ["ssc-resource-hub"]
+
+[dependency-groups]
+dev = [
+    "bump2version",
+    "distlib",
+    "jsonschema>=4.26.0",
+    "pre-commit>=2.17.0",
+    "pytest>=9.2.0",
+    "pytest-playwright>=0.10.0",
+    "twine",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "browser: regression tests requiring Playwright Chromium and a MkDocs build",
+]
 
 
 

@@ -1,0 +1,53 @@
+{
+  "id": "S09",
+  "name": "Automated Code Review",
+  "goal": "LG-03",
+  "outcome": "Design and evaluate an automated review workflow that supports independent human and scientific validation.",
+  "description": "Move from general QA to repeatable review of changes. Combine static checks, review rubrics and agent findings while measuring false positives and missed defects.",
+  "learn": [
+    "Create a structured review rubric for scientific software",
+    "Combine agent review with independent static and dynamic checks",
+    "Measure review precision and recall against seeded defects"
+  ],
+  "tools": [
+    "Claude Code CLI or Codex CLI (choose one)",
+    "Git",
+    "Ruff",
+    "pytest"
+  ],
+  "prior": [
+    "Competencies from S04",
+    "Git diff and pull-request review; Python and static-analysis basics"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "practice": "Review two small supplied diffs in the SSC Lotka–Volterra project containing documented, seeded defects.",
+  "acceptance": "Findings are traceable to code and evidence; at least one false positive or missed defect is discussed; final acceptance remains a human decision.",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "external": "Git diff and pull-request review; Python and static-analysis basics",
+  "modules": [
+    "Review scope and evidence",
+    "Structured review findings",
+    "Independent verification",
+    "Review quality and human decisions"
+  ],
+  "moduleDescriptions": [
+    "Set criteria for correctness, maintainability and scientific validity.",
+    "Generate findings with file locations, severity and evidence.",
+    "Confirm findings using tests and static checks; reject unsupported claims.",
+    "Measure missed defects and false alarms; decide whether to accept the patch."
+  ],
+  "instructors": [],
+  "references": [
+    "pytest",
+    "qa",
+    "aeval"
+  ],
+  "prerequisiteRationale": "S04 establishes the verification targets and test evidence; S09 specializes in reproducible change review and evaluation of reviewer quality.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,249 @@
+{
+  "F01": {
+    "all_of": [],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "F02": {
+    "all_of": [
+      "F01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "U01": {
+    "all_of": [
+      "F01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "R01": {
+    "all_of": [
+      "F02"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "R02": {
+    "all_of": [
+      "F02"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S01-C": {
+    "all_of": [
+      "F02"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S01-O": {
+    "all_of": [
+      "F02"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S02": {
+    "all_of": [],
+    "any_of": [
+      [
+        "S01-C",
+        "S01-O"
+      ]
+    ],
+    "recommended": [],
+    "conditional": []
+  },
+  "S03": {
+    "all_of": [],
+    "any_of": [
+      [
+        "S01-C",
+        "S01-O"
+      ]
+    ],
+    "recommended": [],
+    "conditional": []
+  },
+  "S04": {
+    "all_of": [
+      "S02",
+      "S03"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S05": {
+    "all_of": [
+      "S04"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A01": {
+    "all_of": [
+      "F02"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A02": {
+    "all_of": [
+      "A01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A03": {
+    "all_of": [
+      "A01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A04": {
+    "all_of": [],
+    "any_of": [],
+    "recommended": [
+      "A03"
+    ],
+    "conditional": []
+  },
+  "A05": {
+    "all_of": [
+      "A01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A06": {
+    "all_of": [
+      "A02",
+      "A03"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A07": {
+    "all_of": [],
+    "any_of": [
+      [
+        "A02",
+        "A05",
+        "A06"
+      ]
+    ],
+    "recommended": [],
+    "conditional": []
+  },
+  "A08": {
+    "all_of": [
+      "A07"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "M01": {
+    "all_of": [
+      "F01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "M02": {
+    "all_of": [
+      "M01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "M03": {
+    "all_of": [
+      "A01"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "M04": {
+    "all_of": [
+      "M02"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": [
+      {
+        "course": "M03",
+        "when": "LLM-serving variant only"
+      }
+    ]
+  },
+  "S06": {
+    "all_of": [
+      "S04"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S07": {
+    "all_of": [
+      "S05"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S08": {
+    "all_of": [
+      "S05"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S09": {
+    "all_of": [
+      "S04"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "S10": {
+    "all_of": [
+      "S06"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  },
+  "A09": {
+    "all_of": [
+      "A06"
+    ],
+    "any_of": [],
+    "recommended": [],
+    "conditional": []
+  }
+}

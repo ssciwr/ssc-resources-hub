@@ -1,0 +1,53 @@
+{
+  "id": "A04",
+  "name": "MCP for Research Software",
+  "goal": "LG-04",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Expose research software functionality through an MCP interface.",
+  "description": "Expose a scientific Python function through the Model Context Protocol (MCP). Connect a supplied compatible client, inspect requests, validate results and restrict permissions. Direct model tool calling (A03) is recommended for application developers, but not required to build a server.",
+  "external": "Basic Python, command-line use, Git, package environments and basic client–server concepts. Familiarity with AI tool use in an existing client.",
+  "prior": [
+    "Basic generative AI literacy and familiarity with model-driven tool use",
+    "Basic Python, Git and terminal use",
+    "Ability to operate an MCP-capable client (guided setup supplied)"
+  ],
+  "learn": [
+    "Expose a scientific function through a typed MCP interface",
+    "Connect an existing compatible client and inspect calls",
+    "Test input validation, failure handling and access boundaries"
+  ],
+  "tools": [
+    "MCP Python SDK",
+    "Claude Code CLI or Codex CLI (choose one)",
+    "Git"
+  ],
+  "modules": [
+    "MCP architecture and trust boundaries",
+    "Implementing a scientific tool server",
+    "Connecting a client and observing calls",
+    "Server testing and failure handling"
+  ],
+  "coverage": "Strong (provisional)",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Distinguish hosts, clients and servers; identify permitted capabilities.",
+    "Wrap a climate-data function with a typed interface and bounded inputs.",
+    "Connect an existing client and inspect tool requests and results.",
+    "Test invalid input and unavailable services; restrict access and record versions."
+  ],
+  "practice": "Wrap the existing SSC climate-data script as an MCP tool and call it from a supplied client.",
+  "acceptance": "Valid input returns the expected result; malformed input is rejected; unintended file or network access is not allowed.",
+  "instructors": [],
+  "references": [
+    "mcp",
+    "mcpsdk",
+    "mcpwork"
+  ],
+  "prerequisiteRationale": "A03 is recommended for understanding model-directed tools; a supplied MCP client makes direct API tool calling unnecessary.",
+  "duration_minutes": 240
+}

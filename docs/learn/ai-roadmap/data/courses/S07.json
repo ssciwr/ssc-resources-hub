@@ -1,0 +1,53 @@
+{
+  "id": "S07",
+  "name": "Multi-Agent Orchestration",
+  "goal": "LG-03",
+  "outcome": "Coordinate bounded coding tasks across multiple agents while retaining human approval and traceable integration.",
+  "description": "Decompose a software change into independent tasks, isolate agent work and integrate reviewed outputs. Compare a single-agent workflow with a coordinated one; avoid unnecessary parallelism.",
+  "learn": [
+    "Choose when parallel agent work is justified",
+    "Coordinate isolated tasks with explicit handoff contracts",
+    "Resolve conflicts and validate the integrated result"
+  ],
+  "tools": [
+    "Claude Code CLI or Codex CLI (choose one)",
+    "Git worktrees",
+    "Python",
+    "pytest"
+  ],
+  "prior": [
+    "Competencies from S05",
+    "Git branches, merges and conflict resolution; Python and shell basics"
+  ],
+  "coverage": "Partial",
+  "courseType": "Integration",
+  "practice": "Split a small extension of the SSC scientific Python project into two independent changes; execute on isolated branches and integrate after review.",
+  "acceptance": "Each task has a clear contract, bounded execution and independent tests. The merged result passes integration checks, and the comparison records limitations.",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "external": "Git branches, merges and conflict resolution; Python and shell basics",
+  "modules": [
+    "Task decomposition",
+    "Isolated execution",
+    "Handoffs and integration",
+    "Comparative evaluation"
+  ],
+  "moduleDescriptions": [
+    "Identify independent tasks, shared interfaces and a measurable baseline.",
+    "Assign bounded work in separate worktrees with restricted permissions.",
+    "Exchange structured results, review diffs and resolve a planned conflict.",
+    "Measure task completion, cost or time, and integration quality against the single-agent baseline."
+  ],
+  "instructors": [],
+  "references": [
+    "workflows",
+    "git",
+    "symphony"
+  ],
+  "prerequisiteRationale": "S05 provides the controlled lifecycle, approval gates and traceable handoffs that must survive parallel execution.",
+  "duration_minutes": 240
+}

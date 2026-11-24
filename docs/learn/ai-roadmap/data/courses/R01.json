@@ -1,0 +1,51 @@
+{
+  "id": "R01",
+  "name": "AI for Research Workflows",
+  "goal": "LG-02",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "academic",
+    "technical"
+  ],
+  "outcome": "Apply AI to a research workflow and verify the resulting outputs.",
+  "description": "Use AI to support a small research workflow, such as literature exploration, scientific writing or data interpretation. Verify claims and outputs against reliable evidence and document AI assistance.",
+  "external": "Basic digital literacy and familiarity with the chosen research activity.",
+  "prior": [
+    "Basic digital literacy",
+    "Familiarity with the chosen research activity"
+  ],
+  "learn": [
+    "Apply AI to a bounded research task",
+    "Verify claims against original evidence",
+    "Document inputs, limitations and AI assistance"
+  ],
+  "tools": [
+    "Approved AI assistant",
+    "Zotero (literature example)"
+  ],
+  "modules": [
+    "Research workflow selection",
+    "Guided AI-assisted task",
+    "Evidence checking and human review",
+    "Documentation and disclosure"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Select a bounded literature, writing or analysis task with clear success criteria.",
+    "Use an approved assistant to complete one step while retaining human control.",
+    "Verify claims and citations against primary sources or reference data.",
+    "Record prompts, sources, model settings and disclosure of AI assistance."
+  ],
+  "instructors": [],
+  "references": [
+    "era",
+    "unesco",
+    "zotero",
+    "prompt"
+  ],
+  "prerequisiteRationale": "F02 establishes prompting, source checking and safe AI use before applying these to research tasks.",
+  "duration_minutes": 240
+}

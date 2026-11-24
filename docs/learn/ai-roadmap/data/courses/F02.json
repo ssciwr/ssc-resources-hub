@@ -1,0 +1,51 @@
+{
+  "id": "F02",
+  "name": "Generative AI Fundamentals and Prompting",
+  "goal": "F",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "academic",
+    "technical"
+  ],
+  "outcome": "Use generative AI effectively and critically assess its outputs.",
+  "description": "Explore how generative models respond to instructions and context. Practise iterative prompting, compare outputs against explicit criteria, and document settings while protecting research data.",
+  "external": "Basic digital literacy; access to an approved AI tool.",
+  "prior": [
+    "Basic digital literacy",
+    "Access to an approved AI assistant"
+  ],
+  "learn": [
+    "Write clear prompts with context and constraints",
+    "Compare and refine responses using explicit criteria",
+    "Check claims and record AI use without exposing sensitive data"
+  ],
+  "tools": [
+    "Approved local or institutional AI chat interface",
+    "Prompt evaluation worksheet"
+  ],
+  "modules": [
+    "Generative models and context",
+    "Prompt design and iteration",
+    "Output verification",
+    "Privacy and reproducible prompting"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Explore tokens, context limits, decoding and variability using a short prompt.",
+    "Refine task instructions, examples, constraints and output format.",
+    "Compare responses with a reference answer and identify unsupported claims.",
+    "Record prompt, model and settings; avoid sensitive inputs and disclose use."
+  ],
+  "instructors": [],
+  "references": [
+    "llm",
+    "prompt",
+    "era",
+    "unesco"
+  ],
+  "prerequisiteRationale": "F01 establishes model types, capabilities and limits before learners design prompts.",
+  "duration_minutes": 240
+}

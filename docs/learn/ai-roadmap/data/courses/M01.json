@@ -1,0 +1,52 @@
+{
+  "id": "M01",
+  "name": "Using Pretrained ML and DL Models",
+  "goal": "LG-05",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Run existing ML/DL models on scientific data and interpret predictions.",
+  "description": "Select and run existing traditional ML and deep learning models on scientific inputs. Examine model documentation, prepare compatible inputs, interpret predictions and record the model and execution environment. Model training is outside scope.",
+  "external": "Python, numerical data handling and introductory ML concepts from lectures or equivalent study.",
+  "prior": [
+    "Python and numerical data handling",
+    "Introductory ML concepts"
+  ],
+  "learn": [
+    "Read model documentation and check suitability",
+    "Prepare compatible inputs and run pretrained ML/DL inference",
+    "Interpret predictions and record model provenance"
+  ],
+  "tools": [
+    "Python",
+    "scikit-learn",
+    "PyTorch (candidate)",
+    "Jupyter"
+  ],
+  "modules": [
+    "Model selection and provenance",
+    "Input preparation and compatibility",
+    "Running existing ML and DL models",
+    "Prediction interpretation and reproducibility"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Read model cards, check licensing and choose suitable fixed model artifacts.",
+    "Match input shape, type and preprocessing to each model contract.",
+    "Load supplied fitted ML and pretrained DL models and run predictions.",
+    "Interpret outputs and record model versions, input transformations and settings."
+  ],
+  "instructors": [],
+  "references": [
+    "sscml",
+    "cards",
+    "skpersist",
+    "torch"
+  ],
+  "prerequisiteRationale": "F01 supplies model-family literacy and limitations; scientific data handling and introductory ML are external competencies.",
+  "duration_minutes": 240
+}

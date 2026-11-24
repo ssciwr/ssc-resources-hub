@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'learn/ai-roadmap/css/roadmap.css' | url }}">
+  <style>.md-main__inner.md-grid{max-width:none}.md-content__inner{margin:0;padding:0}.md-content__inner:before{height:0}</style>
+{% endblock %}
+{% block content %}
+  {% include "partials/ai-roadmap-content.html" %}
+  <script type="module" src="{{ 'learn/ai-roadmap/js/main.js' | url }}"></script>
+{% endblock %}

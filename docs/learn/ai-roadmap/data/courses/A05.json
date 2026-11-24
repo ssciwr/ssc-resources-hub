@@ -1,0 +1,54 @@
+{
+  "id": "A05",
+  "name": "Building RAG Systems",
+  "goal": "LG-04",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Implement and evaluate retrieval-augmented generation.",
+  "description": "Build a retrieval-augmented generation application using openly licensed documents. Prepare and index content, retrieve relevant passages, supply evidence to a language model and evaluate retrieval and answers.",
+  "external": "Basic Python, package environments and familiarity with text data; introductory vector and similarity concepts are helpful.",
+  "prior": [
+    "Basic Python and package environments",
+    "Familiarity with text data",
+    "Basic vectors and similarity helpful"
+  ],
+  "learn": [
+    "Chunk and index a small document collection",
+    "Retrieve relevant passages and generate grounded answers",
+    "Evaluate retrieval and answer quality against references"
+  ],
+  "tools": [
+    "Python",
+    "Sentence Transformers",
+    "FAISS (candidate)",
+    "Approved LLM endpoint"
+  ],
+  "modules": [
+    "RAG architecture and document preparation",
+    "Embeddings and indexing",
+    "Retrieval and generation",
+    "Retrieval and answer evaluation"
+  ],
+  "coverage": "Limited",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Prepare a small openly licensed document corpus and split it into chunks.",
+    "Generate embeddings and build a searchable local index.",
+    "Retrieve relevant passages and generate answers with source references.",
+    "Measure retrieval quality and inspect grounded answers against test questions."
+  ],
+  "instructors": [],
+  "references": [
+    "rag",
+    "sbert",
+    "sbertlib",
+    "faiss",
+    "eval"
+  ],
+  "prerequisiteRationale": "A01 supplies the model interface; retrieval and embeddings are taught within A05.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,52 @@
+{
+  "id": "A03",
+  "name": "Tool Calling",
+  "goal": "LG-04",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Connect an AI application to callable functions with validated inputs.",
+  "description": "Connect a model-powered application to a small set of callable functions. Define tool interfaces, validate arguments and results, and restrict actions to explicitly permitted operations.",
+  "external": "Python functions, JSON, basic API concepts and input validation.",
+  "prior": [
+    "Python functions",
+    "JSON and basic API concepts",
+    "Input validation"
+  ],
+  "learn": [
+    "Describe callable tools using typed schemas",
+    "Execute approved functions and return results to the model",
+    "Reject invalid arguments and restrict side effects"
+  ],
+  "tools": [
+    "Python",
+    "Pydantic",
+    "Model API with tool calling"
+  ],
+  "modules": [
+    "Tool definitions and selection",
+    "Tool call execution",
+    "Argument and result validation",
+    "Permissions and testing"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Define a scientific function and its argument schema for model selection.",
+    "Execute a requested function in Python and return the result to the model.",
+    "Validate arguments, tool results and unknown tool names.",
+    "Restrict allowed actions and test success and failure cases."
+  ],
+  "instructors": [],
+  "references": [
+    "toolcalling",
+    "toolwriting",
+    "pydantic",
+    "pytest"
+  ],
+  "prerequisiteRationale": "A01 supplies model request and response handling before dispatching model-selected functions.",
+  "duration_minutes": 240
+}

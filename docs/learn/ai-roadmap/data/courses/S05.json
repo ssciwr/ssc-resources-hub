@@ -1,0 +1,55 @@
+{
+  "id": "S05",
+  "name": "From Code Generation to Control: Engineering Reliable Software with AI",
+  "goal": "LG-03",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Carry out a traceable software change with human-controlled decisions.",
+  "description": "Use a controlled software development lifecycle to introduce a research software change. Trace requirements, design decisions, implementation, verification and validation through explicit human review and approval points.",
+  "external": "Software engineering fundamentals: requirements, architecture, Git, testing and code review.",
+  "prior": [
+    "Requirements and architecture fundamentals",
+    "Git, testing and code review"
+  ],
+  "learn": [
+    "Trace requirements through a gated development lifecycle",
+    "Use isolated, reviewable changes and retain evidence",
+    "Validate acceptance criteria and hand off an auditable change"
+  ],
+  "tools": [
+    "Your chosen CLI (Claude Code or Codex)",
+    "SSC/MPI workshop SDLC skills",
+    "Git",
+    "pytest"
+  ],
+  "modules": [
+    "Specify and plan the change",
+    "Gate the implementation",
+    "Isolate work and preserve evidence",
+    "Verify, validate and hand off"
+  ],
+  "coverage": "Strong (provisional)",
+  "courseType": "Integration",
+  "mapName": "Controlled AI-assisted SDLC",
+  "moduleDescriptions": [
+    "Define acceptance criteria, trace requirements and review a bounded change plan.",
+    "Use the existing SSC lifecycle workflow with explicit human approval before edits.",
+    "Use an isolated branch and retain a trace of decisions and verification artifacts.",
+    "Run independent gates and acceptance checks, then review the handoff."
+  ],
+  "practice": "Apply the existing SSC controlled-lifecycle exercise to a conflicting change request.",
+  "acceptance": "Requirements, design, approval, implementation and acceptance evidence are traceable; all gates are independently checked.",
+  "instructors": [],
+  "references": [
+    "sdlc",
+    "c4",
+    "arc",
+    "tdd"
+  ],
+  "prerequisiteRationale": "S04 supplies verification and audit evidence used at the human approval gates.",
+  "duration_minutes": 240
+}

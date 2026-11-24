@@ -1,0 +1,53 @@
+{
+  "id": "S08",
+  "name": "Agentic CI/CD",
+  "goal": "LG-03",
+  "outcome": "Integrate a bounded coding-agent task into a reproducible CI workflow with independent release gates.",
+  "description": "Use CI to run an isolated agent task or review against a supplied scientific project. Retain human approval, least privilege and deterministic tests; no autonomous production deployment.",
+  "learn": [
+    "Design a restricted noninteractive agent job",
+    "Validate artifacts with deterministic tests and explicit approval gates",
+    "Protect credentials and preserve an auditable execution record"
+  ],
+  "tools": [
+    "Claude Code CLI or Codex CLI (choose one)",
+    "GitHub Actions or local CI runner",
+    "Python",
+    "pytest"
+  ],
+  "prior": [
+    "Competencies from S05",
+    "Basic CI/CD, Git, YAML and shell scripting"
+  ],
+  "coverage": "Partial",
+  "courseType": "Integration",
+  "practice": "Add a review-only or patch-producing agent job to a disposable scientific repository using a local runner or approved CI sandbox.",
+  "acceptance": "The job cannot merge or deploy; failing checks prevent acceptance; credentials remain out of logs; the recorded artifact can be independently reviewed.",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "external": "Basic CI/CD, Git, YAML and shell scripting",
+  "modules": [
+    "CI workflow and trust model",
+    "Bounded noninteractive execution",
+    "Independent checks and approval",
+    "Reproducible execution evidence"
+  ],
+  "moduleDescriptions": [
+    "Distinguish trusted jobs, untrusted inputs and release permissions.",
+    "Configure a restricted job with timeouts and a narrow output artifact.",
+    "Run tests and stop the workflow on failure; require human merge approval.",
+    "Record versions, logs and artifacts without exposing secrets."
+  ],
+  "instructors": [],
+  "references": [
+    "actionssec",
+    "pytest",
+    "git"
+  ],
+  "prerequisiteRationale": "S05 supplies controlled change and approval semantics. Prior CI fundamentals remain external prerequisites.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,54 @@
+{
+  "id": "A09",
+  "name": "Security Engineering for AI Agents",
+  "goal": "LG-04",
+  "outcome": "Threat-model and harden a bounded tool-using research agent, then verify its controls.",
+  "description": "Assess trust boundaries, untrusted inputs, tool permissions, data exposure and failure containment in an existing AI application. Use a local sandbox and synthetic fixtures; focus on defensive verification.",
+  "learn": [
+    "Identify trust boundaries and plausible agent failure modes",
+    "Restrict tools, validate inputs and enforce human approval for sensitive actions",
+    "Test security controls and record remaining risks"
+  ],
+  "tools": [
+    "Python",
+    "pytest",
+    "Pydantic",
+    "Local sandbox",
+    "OWASP agentic security guidance"
+  ],
+  "prior": [
+    "Competencies from A06",
+    "Basic application security, HTTP and Python testing"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "practice": "Harden the supplied two-tool research agent using synthetic inputs and dummy data in a local sandbox.",
+  "acceptance": "Allowed tasks still work; disallowed tool calls are blocked; no sensitive data appears in logs; residual risks are documented.",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "external": "Basic application security, HTTP and Python testing",
+  "modules": [
+    "Agent threat model",
+    "Least privilege and validation",
+    "Containment and human oversight",
+    "Defensive regression tests"
+  ],
+  "moduleDescriptions": [
+    "Map assets, untrusted data, permissions and sensitive actions.",
+    "Allowlist tools, validate arguments and separate instructions from data.",
+    "Use bounded execution and approval gates; protect secrets and research data.",
+    "Check that unsafe requests are rejected and document residual risks."
+  ],
+  "instructors": [],
+  "references": [
+    "owaspagents",
+    "nist",
+    "mcp"
+  ],
+  "prerequisiteRationale": "A06 provides experience implementing tool-using agents, so learners can reason about and verify actual application trust boundaries.",
+  "duration_minutes": 240
+}

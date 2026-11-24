@@ -1,0 +1,234 @@
+{
+  "google": {
+    "citation": "Google, “Machine Learning Crash Course.” [Online]. Available:",
+    "url": "https://developers.google.com/machine-learning/crash-course"
+  },
+  "nist": {
+    "citation": "E. Tabassi, “Artificial Intelligence Risk Management Framework (AI RMF 1.0),” NIST AI 100-1, National Institute of Standards and Technology, Jan. 2023, doi: 10.6028/NIST.AI.100-1.",
+    "url": "https://doi.org/10.6028/NIST.AI.100-1"
+  },
+  "era": {
+    "citation": "European Commission, “ERA living guidelines on the responsible use of generative AI in research: October 2026 update.” 2026. [Online]. Available:",
+    "url": "https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/era-living-guidelines-responsible-use-generative-ai-research-updated-2026-10-16_en"
+  },
+  "unesco": {
+    "citation": "UNESCO, “Guidance for generative AI in education and research.” 2023. [Online]. Available:",
+    "url": "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research"
+  },
+  "llm": {
+    "citation": "Google, “Introduction to large language models.” [Online]. Available:",
+    "url": "https://developers.google.com/machine-learning/crash-course/llm"
+  },
+  "prompt": {
+    "citation": "Anthropic, “Prompting best practices.” [Online]. Available:",
+    "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables"
+  },
+  "zotero": {
+    "citation": "Zotero, “Zotero documentation.” [Online]. Available:",
+    "url": "https://www.zotero.org/support/"
+  },
+  "ammico": {
+    "citation": "AMMICO contributors, “AMMICO: AI-based Media and Misinformation Content Analysis Tool.” [Online]. Available:",
+    "url": "https://ssciwr.github.io/AMMICO/"
+  },
+  "multimodal": {
+    "citation": "AMMICO contributors, “Multimodal analysis.” [Online]. Available:",
+    "url": "https://ssciwr.github.io/AMMICO/tutorials/ammico_demo_multimodal_analysis/"
+  },
+  "cards": {
+    "citation": "M. Mitchell et al., “Model cards for model reporting,” in Proc. Conf. Fairness, Accountability, and Transparency (FAT*), 2019, pp. 220–229, doi: 10.1145/3287560.3287596.",
+    "url": "https://doi.org/10.1145/3287560.3287596"
+  },
+  "claude": {
+    "citation": "Anthropic, “Claude Code documentation.” [Online]. Available:",
+    "url": "https://code.claude.com/docs/en/overview"
+  },
+  "codex": {
+    "citation": "OpenAI, “Codex CLI.” [Online]. Available:",
+    "url": "https://developers.openai.com/codex/cli"
+  },
+  "git": {
+    "citation": "S. Chacon and B. Straub, “Pro Git, 2nd ed..” 2014. [Online]. Available:",
+    "url": "https://git-scm.com/book/en/v2"
+  },
+  "context": {
+    "citation": "Anthropic, “Effective context engineering for AI agents.” 2025. [Online]. Available:",
+    "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
+  },
+  "skills": {
+    "citation": "Agent Skills contributors, “Agent Skills specification.” [Online]. Available:",
+    "url": "https://agentskills.io/specification"
+  },
+  "agentsmd": {
+    "citation": "AGENTS.md contributors, “AGENTS.md.” [Online]. Available:",
+    "url": "https://agents.md/"
+  },
+  "tdd": {
+    "citation": "Scientific Software Center, “Agentic Test-Driven Development.” [Online]. Available:",
+    "url": "https://ssciwr.github.io/agentic-test-driven-development/#1"
+  },
+  "pytest": {
+    "citation": "pytest contributors, “How to write and report assertions in tests.” [Online]. Available:",
+    "url": "https://docs.pytest.org/en/stable/how-to/assert.html"
+  },
+  "beck": {
+    "citation": "K. Beck, <em>Test-Driven Development: By Example.</em> Boston, MA, USA: Addison-Wesley, 2003.",
+    "url": ""
+  },
+  "qa": {
+    "citation": "Scientific Software Center, “AI4RSE quality assurance workshop: exercises.” 2026. [Online]. Available:",
+    "url": "https://github.com/ssciwr/ai4rse_qa"
+  },
+  "behave": {
+    "citation": "behave contributors, “behave documentation.” [Online]. Available:",
+    "url": "https://behave.readthedocs.io/en/stable/"
+  },
+  "aeval": {
+    "citation": "Anthropic, “Demystifying evals for AI agents.” 2026. [Online]. Available:",
+    "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
+  },
+  "sdlc": {
+    "citation": "E. Carreño and M. Scheremetjew, “From Code Generation to Control: Engineering Reliable Software with AI,” workshop slides, AI for RSE Workshop, Göttingen, Germany, Sep. 23, 2026.",
+    "url": "https://events.hifis.net/event/3249/contributions/24254/"
+  },
+  "c4": {
+    "citation": "S. Brown, “The C4 model for visualising software architecture.” [Online]. Available:",
+    "url": "https://c4model.com/"
+  },
+  "arc": {
+    "citation": "arc42 contributors, “arc42 documentation.” [Online]. Available:",
+    "url": "https://docs.arc42.org/"
+  },
+  "httpx": {
+    "citation": "HTTPX contributors, “HTTPX quickstart.” [Online]. Available:",
+    "url": "https://www.python-httpx.org/quickstart/"
+  },
+  "llamaserver": {
+    "citation": "ggml-org, “llama.cpp HTTP server documentation.” [Online]. Available:",
+    "url": "https://github.com/ggml-org/llama.cpp/tree/master/tools/server"
+  },
+  "pydantic": {
+    "citation": "Pydantic contributors, “Models.” [Online]. Available:",
+    "url": "https://docs.pydantic.dev/latest/concepts/models/"
+  },
+  "workflows": {
+    "citation": "Anthropic, “Building effective agents.” 2024. [Online]. Available:",
+    "url": "https://www.anthropic.com/research/building-effective-agents"
+  },
+  "toolwriting": {
+    "citation": "Anthropic, “Writing effective tools for AI agents.” 2025. [Online]. Available:",
+    "url": "https://www.anthropic.com/research/writing-tools-for-agents"
+  },
+  "toolcalling": {
+    "citation": "OpenAI, “Function calling.” [Online]. Available:",
+    "url": "https://developers.openai.com/api/docs/guides/function-calling"
+  },
+  "mcp": {
+    "citation": "Model Context Protocol contributors, “Model Context Protocol specification.” [Online]. Available:",
+    "url": "https://modelcontextprotocol.io/specification/"
+  },
+  "mcpsdk": {
+    "citation": "Model Context Protocol contributors, “MCP Python SDK.” [Online]. Available:",
+    "url": "https://github.com/modelcontextprotocol/python-sdk"
+  },
+  "mcpwork": {
+    "citation": "Scientific Software Center, “MCP workshop, stage 2.” [Online]. Available:",
+    "url": "https://github.com/ssciwr-courses/MCP-workshop-stage2"
+  },
+  "rag": {
+    "citation": "P. Lewis et al., “Retrieval-augmented generation for knowledge-intensive NLP tasks,” in <em>Advances in Neural Information Processing Systems</em>, vol. 33, 2020, pp. 9459–9474.",
+    "url": "https://arxiv.org/abs/2005.11401"
+  },
+  "sbert": {
+    "citation": "N. Reimers and I. Gurevych, “Sentence-BERT: Sentence embeddings using Siamese BERT-networks,” in Proc. EMNLP-IJCNLP, 2019, pp. 3982–3992, doi: 10.18653/v1/D19-1410.",
+    "url": "https://doi.org/10.18653/v1/D19-1410"
+  },
+  "sbertlib": {
+    "citation": "Sentence Transformers contributors, “Semantic search.” [Online]. Available:",
+    "url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html"
+  },
+  "faiss": {
+    "citation": "FAISS contributors, “FAISS documentation.” [Online]. Available:",
+    "url": "https://faiss.ai/"
+  },
+  "agentscourse": {
+    "citation": "Hugging Face, “Agents Course.” [Online]. Available:",
+    "url": "https://huggingface.co/learn/agents-course/unit0/introduction"
+  },
+  "eval": {
+    "citation": "OpenAI, “Evaluation best practices.” [Online]. Available:",
+    "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices"
+  },
+  "judge": {
+    "citation": "L. Zheng et al., “Judging LLM-as-a-judge with MT-Bench and Chatbot Arena,” in <em>Advances in Neural Information Processing Systems</em>, vol. 36, 2023.",
+    "url": "https://arxiv.org/abs/2306.05685"
+  },
+  "fastapi": {
+    "citation": "FastAPI contributors, “FastAPI in containers – Docker.” [Online]. Available:",
+    "url": "https://fastapi.tiangolo.com/deployment/docker/"
+  },
+  "podman": {
+    "citation": "Podman contributors, “Podman documentation.” [Online]. Available:",
+    "url": "https://docs.podman.io/en/latest/"
+  },
+  "fasttest": {
+    "citation": "FastAPI contributors, “Testing.” [Online]. Available:",
+    "url": "https://fastapi.tiangolo.com/tutorial/testing/"
+  },
+  "skpersist": {
+    "citation": "scikit-learn developers, “Model persistence.” [Online]. Available:",
+    "url": "https://scikit-learn.org/stable/model_persistence.html"
+  },
+  "torch": {
+    "citation": "PyTorch contributors, “Saving and loading models.” [Online]. Available:",
+    "url": "https://pytorch.org/tutorials/beginner/saving_loading_models.html"
+  },
+  "sscml": {
+    "citation": "Scientific Software Center, “Machine learning-based research software course.” [Online]. Available:",
+    "url": "https://ssciwr.github.io/machine-learning-based-research-software-course/"
+  },
+  "metrics": {
+    "citation": "scikit-learn developers, “Metrics and scoring: quantifying the quality of predictions.” [Online]. Available:",
+    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "pitfalls": {
+    "citation": "scikit-learn developers, “Common pitfalls and recommended practices.” [Online]. Available:",
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+  },
+  "llama": {
+    "citation": "ggml-org, “llama.cpp.” [Online]. Available:",
+    "url": "https://github.com/ggml-org/llama.cpp"
+  },
+  "quant": {
+    "citation": "ggml-org, “llama.cpp quantization documentation.” [Online]. Available:",
+    "url": "https://github.com/ggml-org/llama.cpp/tree/master/tools/quantize"
+  },
+  "hfgguf": {
+    "citation": "Hugging Face, “GGUF.” [Online]. Available:",
+    "url": "https://huggingface.co/docs/hub/gguf"
+  },
+  "modelcardhf": {
+    "citation": "Hugging Face, “Model cards.” [Online]. Available:",
+    "url": "https://huggingface.co/docs/hub/model-cards"
+  },
+  "harness": {
+    "citation": "OpenAI, “Harness engineering: leveraging Codex in an agent-first world,” 2026. [Online]. Available:",
+    "url": "https://openai.com/index/harness-engineering/"
+  },
+  "symphony": {
+    "citation": "OpenAI, “An open-source spec for Codex orchestration: Symphony,” 2026. [Online]. Available:",
+    "url": "https://openai.com/index/open-source-codex-orchestration-symphony/"
+  },
+  "actionssec": {
+    "citation": "GitHub, “Security for GitHub Actions,” GitHub Docs. [Online]. Available:",
+    "url": "https://docs.github.com/en/actions/how-tos/secure-your-work"
+  },
+  "swebench": {
+    "citation": "C. E. Jimenez et al., “SWE-bench: Can language models resolve real-world GitHub issues?” ICLR, 2024. [Online]. Available:",
+    "url": "https://arxiv.org/abs/2310.06770"
+  },
+  "owaspagents": {
+    "citation": "OWASP GenAI Security Project, “Top 10 for Agentic Applications 2026.” [Online]. Available:",
+    "url": "https://genai.owasp.org/top-10-for-agentic-applications-2026/"
+  }
+}

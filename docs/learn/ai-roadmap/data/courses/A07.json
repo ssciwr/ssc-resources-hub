@@ -1,0 +1,54 @@
+{
+  "id": "A07",
+  "name": "AI Application Evaluation",
+  "goal": "LG-04",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Evaluate an AI-powered application using task-specific criteria.",
+  "description": "Evaluate an existing AI application using reference cases, task-specific metrics and repeated runs. Work with a structured workflow, RAG system or bounded agent; compare results to a baseline and document failures. No particular application architecture is required.",
+  "external": "Basic Python, software testing and introductory statistics or measurement concepts.",
+  "prior": [
+    "Basic Python and software testing",
+    "Introductory statistics or measurement concepts",
+    "Ability to implement a small AI application (structured workflow, RAG or tool-using agent); bring or use a supplied application"
+  ],
+  "learn": [
+    "Create representative test cases and scoring criteria",
+    "Compare against baselines and independent reference evidence",
+    "Diagnose failures and report variability and resource use"
+  ],
+  "tools": [
+    "Python",
+    "pytest",
+    "pandas"
+  ],
+  "modules": [
+    "Evaluation goals and reference cases",
+    "Deterministic and model-based metrics",
+    "Failure diagnosis and repeated runs",
+    "Reporting and reproducibility"
+  ],
+  "coverage": "Partial",
+  "courseType": "Integration",
+  "moduleDescriptions": [
+    "Create a representative set of tasks and independent acceptance criteria.",
+    "Use deterministic checks where possible and calibrate model judges against human references.",
+    "Repeat runs and classify failures using traces, input cases and model settings.",
+    "Report baseline comparisons, variability, cost or latency and versioned evaluation artifacts."
+  ],
+  "practice": "Evaluate a supplied workflow, RAG application or agent on a small reference set.",
+  "acceptance": "Report baseline and task metrics, repeated-run variability, categorized failures and recorded model configuration.",
+  "instructors": [],
+  "references": [
+    "eval",
+    "aeval",
+    "judge",
+    "nist"
+  ],
+  "prerequisiteRationale": "Any one implemented application is sufficient to design application-level tests; learners need not study every architecture.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,52 @@
+{
+  "id": "M02",
+  "name": "Model Evaluation",
+  "goal": "LG-05",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Evaluate existing models against appropriate metrics and baselines.",
+  "description": "Evaluate existing models on suitable reference datasets. Select task-specific metrics, compare with baselines, identify failure modes and document evaluation conditions without training new models.",
+  "external": "Python, basic statistics and introductory ML evaluation concepts.",
+  "prior": [
+    "Python",
+    "Basic statistics",
+    "Introductory ML evaluation concepts"
+  ],
+  "learn": [
+    "Choose metrics and reference datasets for a task",
+    "Compare an existing model with a baseline",
+    "Analyze failures and document evaluation conditions"
+  ],
+  "tools": [
+    "scikit-learn metrics",
+    "pandas",
+    "matplotlib"
+  ],
+  "modules": [
+    "Evaluation design and data leakage",
+    "Metrics and baselines",
+    "Error analysis",
+    "Reporting limitations and reproducibility"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Design a held-out evaluation that avoids contamination and data leakage.",
+    "Select suitable classification or regression metrics and compare with a baseline.",
+    "Inspect errors, subgroup performance and sensitivity to input changes.",
+    "Report limitations, dataset provenance and reproducible evaluation settings."
+  ],
+  "instructors": [],
+  "references": [
+    "metrics",
+    "pitfalls",
+    "cards",
+    "sscml"
+  ],
+  "prerequisiteRationale": "M01 supplies input/output handling and inference provenance needed to evaluate an existing model.",
+  "duration_minutes": 240
+}

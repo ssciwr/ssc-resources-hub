@@ -1,0 +1,53 @@
+{
+  "id": "A08",
+  "name": "Deploying AI Applications",
+  "goal": "LG-04",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Deploy an AI-powered application in a standard environment.",
+  "description": "Package and run an evaluated AI-powered application in a standard deployment environment. Configure dependencies, secrets and access, and perform smoke tests and basic operational checks.",
+  "external": "Linux/CLI, Git, basic HTTP APIs, containers and dependency management. Ability to implement a bounded AI application.",
+  "prior": [
+    "Linux and command-line use",
+    "Git, basic HTTP APIs and containers",
+    "Dependency management",
+    "Ability to implement a bounded AI application or workflow (e.g. A02 or equivalent)"
+  ],
+  "learn": [
+    "Package an evaluated application with pinned dependencies",
+    "Configure secrets and restrict access",
+    "Run deployment smoke tests and inspect logs"
+  ],
+  "tools": [
+    "FastAPI",
+    "Docker or Podman",
+    "pytest"
+  ],
+  "modules": [
+    "Application packaging",
+    "Runtime configuration and secrets",
+    "Local container deployment",
+    "Smoke tests and operational checks"
+  ],
+  "coverage": "Limited",
+  "courseType": "Integration",
+  "moduleDescriptions": [
+    "Package a supplied AI application with its dependencies and API interface.",
+    "Separate runtime configuration and credentials from source code.",
+    "Build and start a local container with restricted access.",
+    "Run smoke tests, inspect logs and document reproducible startup."
+  ],
+  "instructors": [],
+  "references": [
+    "fastapi",
+    "podman",
+    "fasttest",
+    "nist"
+  ],
+  "prerequisiteRationale": "A07 supplies evidence that an implemented application is ready for packaging and smoke tests.",
+  "duration_minutes": 240
+}

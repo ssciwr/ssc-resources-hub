@@ -1,0 +1,54 @@
+{
+  "id": "S10",
+  "name": "Agent Performance and Benchmarking",
+  "goal": "LG-03",
+  "outcome": "Run a reproducible coding-agent benchmark and interpret quality, variability and resource trade-offs.",
+  "description": "Compare coding-agent configurations on representative scientific tasks. Control evaluation conditions, repeat runs and report uncertainty instead of relying on leaderboard rankings.",
+  "learn": [
+    "Define a representative task set and deterministic success criteria",
+    "Run and record comparable experiments under a fixed budget",
+    "Interpret success rates, cost, latency and failure modes with appropriate caveats"
+  ],
+  "tools": [
+    "Claude Code CLI or Codex CLI (choose one)",
+    "Python",
+    "pytest",
+    "CSV or JSON",
+    "pandas (optional)"
+  ],
+  "prior": [
+    "Competencies from S06",
+    "Basic statistics, Python and reproducible experiment design"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "practice": "Compare two harness configurations on a small fixed set of scientific coding tasks; use a supplied runner and small run budget.",
+  "acceptance": "The experiment records configuration, independent pass/fail results and repeats; conclusions distinguish observed results from general claims.",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "external": "Basic statistics, Python and reproducible experiment design",
+  "modules": [
+    "Benchmark design",
+    "Controlled experimental runs",
+    "Failure and resource analysis",
+    "Reporting and limitations"
+  ],
+  "moduleDescriptions": [
+    "Choose tasks, baseline, success criteria and fixed resource budgets.",
+    "Record model, CLI, harness settings and task inputs; repeat small runs.",
+    "Compare outcomes, latency and available token counts; categorize failures.",
+    "Report variability, contamination risk and workload-specific conclusions."
+  ],
+  "instructors": [],
+  "references": [
+    "aeval",
+    "swebench",
+    "harness"
+  ],
+  "prerequisiteRationale": "S06 supplies controlled harness configurations and independent checks, allowing comparisons that isolate a meaningful variable.",
+  "duration_minutes": 240
+}

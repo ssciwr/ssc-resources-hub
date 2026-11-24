@@ -1,0 +1,18 @@
+{
+  "students": {
+    "label": "Students",
+    "help": "Bachelor’s and Master’s students"
+  },
+  "researchers": {
+    "label": "Researchers",
+    "help": "PhD students, postdocs, research associates and scientists"
+  },
+  "academic": {
+    "label": "Academic Staff",
+    "help": "Professors, lecturers, principal investigators and research group leaders"
+  },
+  "technical": {
+    "label": "Technical Professionals",
+    "help": "RSEs, software engineers, developers, data scientists, data engineers and IT professionals"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "A02",
+  "name": "Structured Outputs and Workflows",
+  "goal": "LG-04",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Build a workflow using validated, structured model outputs.",
+  "description": "Build a small multi-step AI application that produces structured results. Define schemas, validate responses, handle invalid outputs and keep deterministic processing separate from model calls.",
+  "external": "Basic Python, JSON and software testing.",
+  "prior": [
+    "Basic Python and JSON",
+    "Basic software testing"
+  ],
+  "learn": [
+    "Define a schema for model-generated data",
+    "Validate outputs and handle invalid responses",
+    "Compose a bounded workflow with deterministic steps"
+  ],
+  "tools": [
+    "Python",
+    "Pydantic",
+    "pytest"
+  ],
+  "modules": [
+    "Structured response schemas",
+    "Parsing and validation",
+    "Composing model and deterministic steps",
+    "Failure handling and workflow tests"
+  ],
+  "coverage": "Limited",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Define a typed response schema for a scientific extraction task.",
+    "Parse and validate outputs; reject or repair invalid responses.",
+    "Combine model calls with deterministic processing in a bounded workflow.",
+    "Test malformed input, failure handling and repeatable outputs."
+  ],
+  "instructors": [],
+  "references": [
+    "pydantic",
+    "workflows",
+    "pytest",
+    "eval"
+  ],
+  "prerequisiteRationale": "A01 supplies model request and response handling before schema validation and workflow composition.",
+  "duration_minutes": 240
+}

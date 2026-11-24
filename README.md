@@ -14,21 +14,99 @@ git clone https://github.com/ssciwr/ssc-resources-hub.git
 git submodule update --init --recursive
 ```
 
-3. Create and activate a virtual environment with uv
+3. Install the locked documentation and test dependencies with uv
 ```bash
-uv venv
-source .venv/bin/activate
+uv sync --locked --extra docs --group dev
 ```
 
-4. Install dependencies
+4. Validate the curriculum and build the complete website
 ```bash
-uv pip install ."[docs,dev]"
+uv run --no-sync pytest tests/ai-roadmap -m "not browser" -q
+uv run --no-sync mkdocs build
 ```
 
 5. Run the MkDocs website locally
 ```bash
-mkdocs serve
+uv run --no-sync mkdocs serve
 ```
+
+CI runs the same validation on pull requests and pushes to `main` or `master`.
+Deployment runs only after validation succeeds on a push to one of those branches.
+CI uses Python 3.13 and uv 0.11.32. The `docs` extra supplies MkDocs plugins;
+the `dev` dependency group supplies test and maintenance tools. Development
+dependencies use `--group dev`, replacing the former `dev` extra. `uv.lock` is the
+single dependency lockfile. See the
+[developer guide](docs/community/contribute-codebase.md#dependency-management)
+for adding, removing, or updating dependencies.
+
+## Curriculum validation
+
+The tests validate the public AI Roadmap and exercise malformed copies of its
+data. To check only the current curriculum, run:
+
+```bash
+uv run --no-sync python scripts/validate_ai_roadmap.py
+```
+
+The validator checks course and shared-data schemas, references, duplicate JSON
+keys, prerequisite integrity, cycles, and diagram consistency. It preserves the
+migration baseline of 29 courses (13 MVP and 16 future), five learning goals,
+four audiences, and 35 relationships, including equivalent CLI alternatives,
+AND prerequisites, recommendations, and conditional prerequisites. Intentional
+curriculum extensions must update the baseline checks in
+`scripts/validate_ai_roadmap.py` as part of their review.
+
+The current frontend supports one OR group per course. Cycle detection includes
+all relationship kinds, retaining the migration's conservative policy. Unassigned
+instructors and unspecified practical projects remain valid draft placeholders;
+when a project is supplied, its acceptance criteria are required too.
+
+Conditional prerequisites use the `course` and `when` fields in
+`docs/learn/ai-roadmap/data/dependencies.json`. The catalogue, prerequisite details,
+and reverse "Enables" links read those records without course-specific frontend
+rules. Diagram geometry and abbreviated labels remain in `data/layout.json`;
+relationship changes must keep that layout and the reviewed baseline consistent.
+
+Only declared public fields and listed data files are allowed. This guards
+against accidental extra fields or files; it cannot determine whether prose in
+an allowed field is confidential. Publication rights, teaching readiness, actual
+SVG arrow geometry, and assistive-technology behavior require separate review.
+
+## Browser regression tests
+
+The browser suite uses [Playwright's pytest plugin](https://playwright.dev/python/docs/test-runners)
+from the `dev` group. Install Chromium and its operating-system dependencies once:
+
+```bash
+uv run --no-sync playwright install --with-deps chromium
+```
+
+Run the browser suite:
+
+```bash
+uv run --no-sync pytest tests/ai-roadmap -m browser --browser chromium
+```
+
+Tests build the complete MkDocs site into a temporary directory and serve it on
+localhost under `/ssc-resources-hub/`, exercising project-site asset paths. To
+reuse a fresh existing build, add `--roadmap-site-dir site`. Curriculum and
+browser tests can also be run together by omitting `-m browser` after installing
+Chromium. Tests use the actual modules and JSON over HTTP; external services are
+blocked, and avatar rendering uses deterministic responses. The multiple-profile
+test reuses documented instructor information in test-only responses.
+
+CI runs both suites before deployment, following Playwright's
+[browser installation guidance](https://playwright.dev/python/docs/ci).
+On browser failures, CI uploads traces and screenshots for seven days. To capture
+the same artifacts locally, add `--tracing retain-on-failure --screenshot
+only-on-failure --output test-results/ai-roadmap` to the pytest command.
+
+For VS Code testing, select `.venv/bin/python` with **Python: Select
+Interpreter**, then refresh test discovery. Select the executable, not the `.venv`
+directory. Run `uv sync --locked --extra docs
+--group dev` after test dependencies change. The workspace default interpreter
+setting does not replace an already-selected Conda or other interpreter; see the
+[VS Code interpreter settings](https://code.visualstudio.com/docs/python/settings-reference#general-python-settings).
 
 ## License
 

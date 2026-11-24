@@ -1,0 +1,1 @@
+import('./app.js').catch(error=>{console.error(error);const message=document.getElementById('roadmapError');if(message){message.hidden=false;message.textContent='The roadmap could not load. Please refresh the page or contact SSC.';}});

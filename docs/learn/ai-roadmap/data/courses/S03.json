@@ -1,0 +1,54 @@
+{
+  "id": "S03",
+  "name": "Agentic Test-Driven Development",
+  "goal": "LG-03",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Use tests to guide and verify agent-assisted implementation.",
+  "description": "Apply test-driven development to agent-assisted software changes. Translate requirements into tests, review test coverage and guide the agent through a test-first implementation and refactoring cycle.",
+  "external": "Programming, Git and basic software testing, including running and interpreting unit tests.",
+  "prior": [
+    "Programming and Git",
+    "Ability to run and interpret unit tests"
+  ],
+  "learn": [
+    "Design independently reviewed tests from scientific requirements",
+    "Use deterministic fixtures and a repeatable test command",
+    "Guide red–green–refactor without weakening tests"
+  ],
+  "tools": [
+    "Your chosen CLI (Claude Code or Codex)",
+    "pytest",
+    "Git"
+  ],
+  "modules": [
+    "Testable scientific requirements",
+    "An agent-friendly test suite",
+    "Red, green and refactor",
+    "Independent regression review"
+  ],
+  "coverage": "Strong (provisional)",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Convert a scientific requirement into a failing test with expected values.",
+    "Use fixed fixtures, isolated state and one repeatable test command.",
+    "Direct the agent to implement only enough code to pass; then refactor.",
+    "Inspect tests and changes for weakened assertions, over-mocking and numerical regressions."
+  ],
+  "practice": "Add a small scientific function using a test-first workflow.",
+  "acceptance": "A reviewed failing test precedes implementation; deterministic regression tests pass without weakened assertions.",
+  "instructors": [
+    "lkeegan"
+  ],
+  "references": [
+    "tdd",
+    "beck",
+    "pytest"
+  ],
+  "prerequisiteRationale": "One CLI course supplies agent operation; test-first design is taught here.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,54 @@
+{
+  "id": "S06",
+  "name": "Harness Engineering",
+  "goal": "LG-03",
+  "outcome": "Configure a reproducible coding-agent harness with independently enforced execution boundaries and verification gates.",
+  "description": "Engineer the environment around a coding agent: repository policies, controlled execution, deterministic feedback and recoverable state. Extend an existing CLI rather than build a new agent framework.",
+  "learn": [
+    "Configure a bounded agent execution environment",
+    "Enforce deterministic checks independently of the agent",
+    "Resume a failed task from recorded state without losing audit evidence"
+  ],
+  "tools": [
+    "Claude Code CLI or Codex CLI (choose one)",
+    "Python",
+    "pytest",
+    "Git",
+    "Podman (optional)"
+  ],
+  "prior": [
+    "Competencies from S04, including agent operation and verification",
+    "Python, Git and shell scripting; basic container concepts"
+  ],
+  "coverage": "Partial",
+  "courseType": "Integration",
+  "practice": "Extend the Lotka–Volterra repository with a small wrapper that runs the selected CLI in a disposable workspace and verifies changes.",
+  "acceptance": "A deliberately failing check blocks acceptance; execution respects the workspace boundary; a resumed run retains task state and evidence.",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "external": "Python, Git and shell scripting; basic container concepts",
+  "modules": [
+    "Harness design and boundaries",
+    "Independent feedback gates",
+    "State and recovery",
+    "Harness validation"
+  ],
+  "moduleDescriptions": [
+    "Separate the model, tools, context, execution environment and state.",
+    "Configure a test and lint command that blocks invalid changes.",
+    "Record task state and recover after a controlled interruption.",
+    "Compare a baseline and guarded run using independent acceptance checks."
+  ],
+  "instructors": [],
+  "references": [
+    "harness",
+    "pytest",
+    "git"
+  ],
+  "prerequisiteRationale": "S04 establishes the verification targets and failure checks that this course turns into enforceable runtime controls.",
+  "duration_minutes": 240
+}

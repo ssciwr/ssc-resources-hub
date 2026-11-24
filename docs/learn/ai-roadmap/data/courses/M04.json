@@ -1,0 +1,52 @@
+{
+  "id": "M04",
+  "name": "Model Serving and Deployment",
+  "goal": "LG-05",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Expose an existing ML/DL model through a reproducible service.",
+  "description": "Package an existing model behind a reproducible inference interface or service. Validate request and response behaviour, document configuration and manage basic deployment and access. Advanced infrastructure and model training are outside scope. The standard exercise serves a conventional ML/DL model; an LLM-serving variant additionally requires local LLM inference experience.",
+  "external": "Python, Linux/CLI, HTTP APIs, containers and dependency management. For LLM serving, local LLM inference competency is additionally required.",
+  "prior": [
+    "Python and Linux/CLI",
+    "HTTP APIs, containers and dependency management"
+  ],
+  "learn": [
+    "Expose an existing model through an inference service",
+    "Validate inputs and outputs and configure basic access",
+    "Package and test the service reproducibly"
+  ],
+  "tools": [
+    "FastAPI",
+    "Docker or Podman",
+    "pytest"
+  ],
+  "modules": [
+    "Inference service interface",
+    "Model loading and validation",
+    "Local packaging and access control",
+    "Service testing and reproducibility"
+  ],
+  "coverage": "Limited",
+  "courseType": "Integration",
+  "moduleDescriptions": [
+    "Define a prediction endpoint with validated input and output contracts.",
+    "Load a trusted fixed model once and check preprocessing consistency.",
+    "Package the service locally, configure access and restrict exposed resources.",
+    "Test health, prediction and failure paths; record runtime and model versions."
+  ],
+  "instructors": [],
+  "references": [
+    "skpersist",
+    "fastapi",
+    "podman",
+    "fasttest",
+    "cards"
+  ],
+  "prerequisiteRationale": "M02 supplies model suitability evidence. M03 additionally supplies local LLM runtime experience only for the optional LLM-serving variant.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,55 @@
+{
+  "id": "S01-O",
+  "name": "Getting Started with Codex CLI",
+  "goal": "LG-03",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Complete and verify a bounded repository change using one coding agent.",
+  "description": "Use Codex CLI to make a small, controlled scientific software change. Learn session setup, permissions, model and context settings, task specification, and independent review. Choose this or the other CLI course, not both.",
+  "external": "Basic programming, Git, command-line use and software execution; an approved coding agent.",
+  "prior": [
+    "Basic Python, Git and terminal use",
+    "Access to the selected CLI and an approved model/service"
+  ],
+  "learn": [
+    "Configure Codex CLI with approved access and least-privilege controls",
+    "Specify a bounded task with relevant project instructions and acceptance criteria",
+    "Review the resulting change, run independent tests and record provenance"
+  ],
+  "tools": [
+    "Codex CLI",
+    "AGENTS.md",
+    "Git",
+    "Python",
+    "pytest"
+  ],
+  "modules": [
+    "Agent fundamentals and first session",
+    "Safe execution and model settings",
+    "Prompting, planning and project context",
+    "Implement, review and verify"
+  ],
+  "coverage": "Strong",
+  "courseType": "Focused",
+  "mapName": "Codex CLI",
+  "moduleDescriptions": [
+    "Distinguish models from agents; configure Codex CLI, authenticate and inspect a sample repository.",
+    "Check sandbox and approval settings, model selection and context limits before allowing changes.",
+    "Write a bounded task with acceptance criteria; use AGENTS.md and review a plan before editing.",
+    "Implement one scientific code change; inspect diffs, run tests and record the configuration."
+  ],
+  "practice": "Use the existing Lotka–Volterra Python repository. Add a small parameter or CLI feature on a disposable branch using Codex.",
+  "acceptance": "A reviewed plan, bounded permissions, a correct numerical result, passing supplied tests and a reviewed diff; record model, CLI version and settings.",
+  "instructors": [],
+  "references": [
+    "codex",
+    "git",
+    "pytest"
+  ],
+  "prerequisiteRationale": "F02 establishes prompt design and output limitations; CLI operation is taught here.",
+  "duration_minutes": 240
+}

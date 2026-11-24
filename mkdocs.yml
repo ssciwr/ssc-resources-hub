@@ -64,6 +64,9 @@ nav:
   - Courses:
       - learn/on-demand-courses/index.md
 
+  - AI Roadmap:
+      - learn/ai-roadmap/index.md
+
   - Lunch Python: 
     - twin-repos/lunch-python/README.md
 

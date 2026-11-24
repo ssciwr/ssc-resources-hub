@@ -1,0 +1,30 @@
+import {$,root,escapeHtml} from './dom.js';
+import {byId,goals,roles,courseBibliography,referenceLibrary,prerequisiteRationale} from './data-loader.js';
+import {prereq,next,alternatives,altNext,recommendations,conditionalPrerequisites,conditionalNext} from './dependencies.js';
+import {canvas} from './graph.js';
+let current=null;
+function instructorSection(c){return `<section class="detail-section instructors-section"><h3>Instructors</h3>${c.instructors.length?`<ul class="instructor-list">${c.instructors.map(i=>`<li class="instructor-card"><span class="instructor-avatar" aria-hidden="true"><span>${i.initials}</span>${i.avatar?`<img src="${i.avatar}" alt="" width="64" height="64" referrerpolicy="no-referrer" onerror="this.hidden=true">`:''}</span><div class="instructor-info"><strong>${i.name}</strong>${i.position?`<span class="instructor-position">${i.position}</span>`:''}<small>${i.affiliation}</small><div class="instructor-links">${i.github?`<a href="${i.github}" target="_blank" rel="noopener noreferrer">GitHub · @${i.githubHandle||'profile'} ↗</a>`:''}${i.source?`<a href="${i.source}" target="_blank" rel="noopener noreferrer">Official course page ↗</a>`:''}</div></div></li>`).join('')}</ul>`:'<p class="instructor-pending">To be confirmed.</p>'}</section>`;}
+export function openCourse(id){
+ const c=byId[id];if(!c)return;current=id;
+ for(const el of canvas.querySelectorAll('.course-link'))el.classList.toggle('selected',el.dataset.id===id);
+ $('detailMeta').innerHTML=`<div class="detail-kicker"><span class="tag ${c.mvp?'mvp':''}">${c.mvp?'MVP candidate':'Future course'}</span><span>${c.id} · ${goals[c.goal]}</span><span class="sep">|</span><span>Up to 4 hours</span></div>`;
+ $('detailTitle').textContent=c.name;
+ const bullets=items=>`<ul class="detail-list">${items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
+ const links=ids=>ids.length?bullets(ids.map(i=>`<button class="link" data-open="${i}">${i} · ${byId[i].name}</button>`)):'<p class="empty-list">None</p>';
+ const conditions=conditionalPrerequisites(id),enabledConditions=conditionalNext(id);
+ const conditionalLinks=items=>items.map(({course,when})=>`<div class="conditional-relation"><p class="conditional-note">Conditional: ${escapeHtml(when)}</p>${links([course])}</div>`).join('');
+ $('detailBody').innerHTML=`
+ <section class="detail-section prereq-card"><h3>Prerequisites</h3><div class="prereq-grid"><div><h4>SSC AI courses</h4>${prereq(id).length?links(prereq(id)):alternatives(id).length||conditions.length?'':links([])}${alternatives(id).length?`<p class="choice-note">Complete any one (or equivalent competency):</p>${links(alternatives(id))}`:''}${recommendations(id).length?`<p class="recommended-note">Recommended, not mandatory:</p>${links(recommendations(id))}`:''}${conditionalLinks(conditions)}</div><div><h4>Prior knowledge &amp; setup</h4>${bullets(c.prior)}</div></div><p class="prereq-note"><strong>Why these prerequisites?</strong> ${prerequisiteRationale[id]}</p><p class="prereq-note">Equivalent prior competencies are accepted; attending prerequisite courses is not mandatory.</p></section>
+ <section class="detail-section"><h3>Description</h3><p class="description-copy">${c.description}</p></section>
+ ${instructorSection(c)}
+ <section class="detail-section"><h3>About this course</h3><div class="about-grid"><div><h4>What you will learn</h4>${bullets(c.learn)}</div><div class="about-tools"><h4>Tools you will learn</h4><ul class="tools">${c.tools.map(t=>`<li>${t}</li>`).join('')}</ul><p class="tools-note">Proposed teaching tools; final selection is subject to SSC review.</p></div></div></section>
+ <section class="detail-section"><h3>Modules</h3><ol class="module-list">${c.modules.map((m,i)=>`<li><span class="module-number" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><span class="module-copy"><strong>${m}</strong><small>${c.moduleDescriptions[i]}</small></span></li>`).join('')}</ol></section>
+ ${c.practice?`<section class="detail-section"><h3>Practical project</h3><p>${c.practice}</p><h4>Acceptance criteria</h4><p>${c.acceptance}</p></section>`:""}
+ <div class="detail-bottom"><section class="detail-section"><h3>Intended learners</h3><p>${c.roles.length===4?'All learner categories':c.roles.map(r=>roles[r]).join(', ')}</p></section><section class="detail-section"><h3>Enables</h3>${next(id).length?links(next(id)):altNext(id).length||enabledConditions.length?'':links([])}${altNext(id).length?`<p class="choice-note">One alternative pathway into:</p>${links(altNext(id))}`:''}${conditionalLinks(enabledConditions)}</section><section class="detail-section"><h3>Material reuse / readiness</h3><p><strong>${c.coverage} coverage</strong> · ${c.courseType} course</p></section></div>
+ <section class="detail-section bibliography"><h3>Learner bibliography</h3><p class="bib-intro">Recommended readings and technical references · IEEE-style numbering · Not required before the course. Tool-specific readings follow the selected implementation; the proposed list remains subject to SSC review.</p><ol class="bib-list">${courseBibliography[id].map((key,i)=>{const r=referenceLibrary[key];return `<li><span class="bib-num">[${i+1}]</span><div>${r.citation}${r.url?`<a href="${r.url}" target="_blank" rel="noopener noreferrer" aria-label="Open reference ${i+1} in a new tab">${r.url}<span class="external-mark" aria-hidden="true">↗</span></a>`:''}</div></li>`}).join('')}</ol></section>
+
+ <p class="detail-note">Draft course specification · Learning outcomes, tools and modules are subject to curriculum validation.</p>`;
+ if(!$('detail').open)$('detail').showModal();$('detail').scrollTop=0;
+ $('detailTitle').focus({preventScroll:true});
+}
+root.addEventListener('click',e=>{const a=e.target.closest('[data-open]');if(a){e.preventDefault();openCourse(a.dataset.open)}});$('close').onclick=()=>$('detail').close();$('detail').addEventListener('click',e=>{if(e.target===$('detail'))$('detail').close()});$('detail').addEventListener('close',()=>{canvas.querySelectorAll('.selected').forEach(x=>x.classList.remove('selected'));current=null});

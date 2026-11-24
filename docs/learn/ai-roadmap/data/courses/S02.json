@@ -1,0 +1,54 @@
+{
+  "id": "S02",
+  "name": "Context Engineering and Agent Skills",
+  "goal": "LG-03",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Design reusable context and agent instructions for a coding workflow.",
+  "description": "Control the context supplied to a coding agent through project instructions, selected files and reusable skills. Create a small skill with explicit instructions and deterministic checks, then assess its behaviour.",
+  "external": "Basic programming, Git, command-line use and familiarity with project file structure.",
+  "prior": [
+    "Basic programming",
+    "Git and command-line use",
+    "Familiarity with project file structure"
+  ],
+  "learn": [
+    "Manage context and diagnose conflicting project instructions",
+    "Create a reusable skill with a deterministic check",
+    "Evaluate skill activation, failure cases and versioned behaviour"
+  ],
+  "tools": [
+    "Your chosen CLI (Claude Code or Codex)",
+    "AGENTS.md or CLAUDE.md",
+    "SKILL.md",
+    "Git"
+  ],
+  "modules": [
+    "Context budgets and instruction hierarchy",
+    "Designing reusable skills",
+    "Deterministic checks and context boundaries",
+    "Evaluating and maintaining skills"
+  ],
+  "coverage": "Strong (provisional)",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Inspect context use, instruction precedence and irrelevant files.",
+    "Encode a repeatable research procedure in SKILL.md with scoped supporting files.",
+    "Add a deterministic check; keep untrusted data separate from instructions.",
+    "Compare activation, outputs and failures with and without the skill."
+  ],
+  "practice": "Build a skill for a repeatable repository inspection or scientific validation task.",
+  "acceptance": "The skill triggers for relevant tasks, avoids unrelated tasks, runs a deterministic check and has versioned instructions.",
+  "instructors": [],
+  "references": [
+    "context",
+    "skills",
+    "agentsmd"
+  ],
+  "prerequisiteRationale": "One CLI course supplies repository navigation and agent operation needed to create and test skills.",
+  "duration_minutes": 240
+}

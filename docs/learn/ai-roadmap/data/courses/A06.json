@@ -1,0 +1,54 @@
+{
+  "id": "A06",
+  "name": "Building AI Agents",
+  "goal": "LG-04",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Implement a bounded agent that uses tools to complete a task.",
+  "description": "Implement a bounded AI agent that selects tools and performs a small research task. Define its execution loop, stop conditions, error handling and human oversight; assess when a simpler workflow is preferable.",
+  "external": "Python, API integration, software testing and basic control-flow concepts.",
+  "prior": [
+    "Python and API integration",
+    "Basic control flow",
+    "Software testing"
+  ],
+  "learn": [
+    "Implement a bounded tool-using agent loop",
+    "Enforce step limits, validation and controlled recovery",
+    "Compare the agent against a simpler workflow"
+  ],
+  "tools": [
+    "Python",
+    "Model API with tool calling",
+    "pytest"
+  ],
+  "modules": [
+    "When to use an agent",
+    "Bounded execution and state",
+    "Tool use and recovery",
+    "Evaluation and human oversight"
+  ],
+  "coverage": "Limited",
+  "courseType": "Integration",
+  "moduleDescriptions": [
+    "Compare a fixed workflow with dynamic tool selection.",
+    "Implement a small loop with explicit state and a finite step budget.",
+    "Validate tool arguments and results; recover from a failed call without unbounded retries.",
+    "Compare against a fixed workflow, record traces and require approval for consequential actions."
+  ],
+  "practice": "Implement a small agent that selects between two supplied scientific functions.",
+  "acceptance": "The agent terminates within a fixed budget, validates arguments, handles a failed call and is compared with a deterministic workflow.",
+  "instructors": [],
+  "references": [
+    "workflows",
+    "agentscourse",
+    "toolwriting",
+    "aeval"
+  ],
+  "prerequisiteRationale": "A02 supplies bounded workflow composition and validation; A03 supplies tool dispatch. Both underpin the agent loop.",
+  "duration_minutes": 240
+}

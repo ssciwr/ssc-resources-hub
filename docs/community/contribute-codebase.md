@@ -21,89 +21,86 @@ us in any way you like.
 
 ## Dependency management
 
-We use [Poetry](https://python-poetry.org) for dependency management. Please
-make sure that you have installed Poetry and set up the environment correctly
-before starting development.
+We use [uv](https://docs.astral.sh/uv/) with `pyproject.toml` and `uv.lock` for
+dependency management. `uv.lock` is the repository's single dependency lockfile.
+CI uses Python 3.13 and uv 0.11.32; these versions are also suitable for local
+development.
 
 ### Setting up the environment
 
-- Install dependencies from the lock file: `poetry install`
+Run from the repository root after cloning and initializing its submodules:
 
-- Use the environment: You can either run commands directly with `poetry run
-<command>` or open a shell with `poetry shell` and then run commands directly.
+```bash
+git submodule update --init --recursive
+uv sync --locked --extra docs --group dev
+```
+
+This creates or updates the workspace `.venv` using the locked versions.
+`--extra docs` selects the documentation dependencies in
+`[project.optional-dependencies].docs`; `--group dev` selects testing and
+maintenance tools in `[dependency-groups].dev`. Development tools are installed
+through the group, replacing the former `dev` extra.
+
+After syncing, use `uv run --no-sync <command>` to run tools in that environment.
+In VS Code, select `.venv/bin/python` with **Python: Select Interpreter** and
+refresh test discovery. Select the executable rather than the `.venv` directory.
 
 ### Updating the environment
 
-If you want to fix dependency issues, please do so in the Poetry
-framework. If Poetry does not work for you for some reason, please let us know.
+Use the appropriate dependency section when adding a package:
 
-The Poetry dependencies are organized in groups. There are groups with
-dependencies needed for running ssc-resource-hub (`[tool.poetry.dependencies]` with the
-group name `main`) and a group with dependencies needed for development
-(`[tool.poetry.group.dev.dependencies]` with the group name `dev`).
+| Purpose | Command |
+| --- | --- |
+| Project dependency | `uv add <package>` |
+| Documentation dependency | `uv add --optional docs <package>` |
+| Testing or maintenance tool | `uv add --group dev <package>` |
 
-For adding new dependencies:
+For removals, use `uv remove` with the same `--optional docs` or `--group dev`
+selection. If editing `pyproject.toml` directly, run `uv lock` afterward. Review
+the changes to both files and sync the complete environment again:
 
-- Add new dependencies via `poetry add`:
-`poetry add <dependency> --group <group>`. This will update the `pyproject.toml`
-and lock file automatically.
+```bash
+uv sync --locked --extra docs --group dev
+```
 
-- Add new dependencies via `pyproject.toml`: Add the dependency to the
-`pyproject.toml` file in the correct group, including version. Then update the
-lock file: `poetry lock` and install the dependencies: `poetry install`.
+For an intentional package upgrade, use `uv lock --upgrade-package <package>`,
+review the lockfile diff, then sync and validate. CI uses `--locked` so an outdated
+lockfile fails validation instead of being regenerated. See uv's
+[dependency guide](https://docs.astral.sh/uv/concepts/projects/dependencies/) and
+[locking and syncing guide](https://docs.astral.sh/uv/concepts/projects/sync/).
 
 ## Code quality and formal requirements
 
-For ensuring code quality, the following tools are used:
+Keep changes focused and follow the surrounding code's conventions. Add tests
+for meaningful behavior changes. CI currently runs curriculum validation,
+browser regression tests, and a full documentation build.
 
-- [isort](https://isort.readthedocs.io/en/latest/) for sorting imports
-
-- [black](https://black.readthedocs.io/en/stable/) for automated code formatting
-
-- [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks) for
-ensuring some general rules
-
-- [pep585-upgrade](https://github.com/snok/pep585-upgrade) for automatically
-upgrading type hints to the new native types defined in PEP 585
-
-- [pygrep-hooks](https://github.com/pre-commit/pygrep-hooks) for ensuring some
-general naming rules
-
-- [Ruff](https://docs.astral.sh/ruff/) An extremely fast Python linter
-and code formatter, written in Rust
-
-We recommend configuring your IDE to execute Ruff on save/type, which will
-automatically keep your code clean and fix some linting errors as you type. This
-is made possible by the fast execution of Ruff and removes the need to run a
-dedicated pre-commit step. For instance, in VSCode or Cursor, you can add this
-to your `.vscode/settings.json`:
-
-```json
-{
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.ruff": "explicit",
-        "source.organizeImports.ruff": "explicit"
-    },
-    "editor.defaultFormatter": "charliermarsh.ruff"
-}
-```
-
-Alternatively, pre-commit hooks can be used to automatically or manually run
-these tools before each commit. They are defined in `.pre-commit-config.yaml`.
-To install the hooks run `poetry run pre-commit install`. The hooks are then
-executed before each commit. For running the hook for all project files (not
-only the changed ones) run `poetry run pre-commit run --all-files`. Our CI runs
-the pre-commit hooks, so running them locally is a good way to check if your
-code conforms to the formatting rules.
+The development group retains `pre-commit` and the existing release tools.
+The repository currently has no root `.pre-commit-config.yaml` or formatter/linter
+CI job. Introducing hooks or formatting checks requires adding and reviewing the
+configuration together with its dependencies.
 
 ## Testing
 
-The project uses [pytest](https://docs.pytest.org/en/stable/) for testing. To
-run the tests, please run `pytest` in the root directory of the project. We are
-developing ssc-resource-hub using test-driven development. Please make sure that you
-add tests for your code before submitting a pull request.
+Run curriculum validation and the full documentation build from the repository
+root using the synced environment:
+
+```bash
+uv run --no-sync pytest -m "not browser" -q
+uv run --no-sync mkdocs build
+```
+
+For browser tests, install Chromium and its operating-system dependencies once:
+
+```bash
+uv run --no-sync playwright install --with-deps chromium
+uv run --no-sync pytest -m browser -q
+```
+
+Run both suites with `uv run --no-sync pytest`. Default discovery is restricted
+to `tests/`, excluding tests belonging to documentation submodules and generated
+site files. Browser tests build and serve the actual MkDocs site locally; to
+reuse a fresh build, add `--roadmap-site-dir site`.
 
 The existing tests can also help you to understand how the code works. If you
 have any questions, please feel free to ask them in the issue tracker or on

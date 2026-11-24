@@ -1,0 +1,3359 @@
+{
+  "svg": {
+    "id": "overview",
+    "viewBox": "0 0 1920 1430",
+    "width": "1920",
+    "height": "1430",
+    "class": "path-svg full-map",
+    "role": "group",
+    "aria-label": "Complete SSC AI roadmap with five learning goals and shared foundations"
+  },
+  "elements": [
+    {
+      "tag": "defs",
+      "attrs": {},
+      "children": [
+        {
+          "tag": "marker",
+          "attrs": {
+            "id": "end-required",
+            "markerWidth": "8",
+            "markerHeight": "8",
+            "refX": "7",
+            "refY": "4",
+            "orient": "auto",
+            "markerUnits": "userSpaceOnUse"
+          },
+          "children": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M0 0 L8 4 L0 8 Z",
+                "fill": "#546970"
+              }
+            }
+          ]
+        },
+        {
+          "tag": "marker",
+          "attrs": {
+            "id": "end-alternative",
+            "markerWidth": "8",
+            "markerHeight": "8",
+            "refX": "7",
+            "refY": "4",
+            "orient": "auto",
+            "markerUnits": "userSpaceOnUse"
+          },
+          "children": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M0 0 L8 4 L0 8 Z",
+                "fill": "#007d7a"
+              }
+            }
+          ]
+        },
+        {
+          "tag": "marker",
+          "attrs": {
+            "id": "end-recommended",
+            "markerWidth": "8",
+            "markerHeight": "8",
+            "refX": "7",
+            "refY": "4",
+            "orient": "auto",
+            "markerUnits": "userSpaceOnUse"
+          },
+          "children": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M0 0 L8 4 L0 8 Z",
+                "fill": "#236f9d"
+              }
+            }
+          ]
+        },
+        {
+          "tag": "marker",
+          "attrs": {
+            "id": "end-conditional",
+            "markerWidth": "8",
+            "markerHeight": "8",
+            "refX": "7",
+            "refY": "4",
+            "orient": "auto",
+            "markerUnits": "userSpaceOnUse"
+          },
+          "children": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M0 0 L8 4 L0 8 Z",
+                "fill": "#946c35"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "rect",
+      "attrs": {
+        "width": "1920",
+        "height": "1430",
+        "fill": "#f8f7f3"
+      }
+    },
+    {
+      "tag": "rect",
+      "attrs": {
+        "x": "783",
+        "y": "12",
+        "width": "354",
+        "height": "236",
+        "rx": "15",
+        "fill": "#fff",
+        "stroke": "#e0ded8"
+      }
+    },
+    {
+      "tag": "text",
+      "attrs": {
+        "x": "800",
+        "y": "26",
+        "class": "foundation-caption"
+      },
+      "text": "SHARED FOUNDATIONS"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "lane-bg",
+        "data-goal": "LG-01"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "18",
+            "y": "290",
+            "width": "215",
+            "height": "698",
+            "rx": "15",
+            "fill": "#fff",
+            "stroke": "#dedbd4"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "33",
+            "y": "314",
+            "class": "lane-id"
+          },
+          "text": "LG-01"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "33",
+            "y": "337",
+            "class": "lane-heading"
+          },
+          "text": "Understand AI"
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "lane-bg",
+        "data-goal": "LG-02"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "235",
+            "y": "290",
+            "width": "220",
+            "height": "698",
+            "rx": "15",
+            "fill": "#fff",
+            "stroke": "#dedbd4"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "250",
+            "y": "314",
+            "class": "lane-id"
+          },
+          "text": "LG-02"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "250",
+            "y": "337",
+            "class": "lane-heading"
+          },
+          "text": "Apply AI"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "250",
+            "y": "355",
+            "class": "lane-heading"
+          },
+          "text": "in research"
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "lane-bg",
+        "data-goal": "LG-03"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "467",
+            "y": "290",
+            "width": "360",
+            "height": "1118",
+            "rx": "15",
+            "fill": "#fff",
+            "stroke": "#dedbd4"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "482",
+            "y": "314",
+            "class": "lane-id"
+          },
+          "text": "LG-03"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "482",
+            "y": "337",
+            "class": "lane-heading"
+          },
+          "text": "Develop software with AI"
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "lane-bg",
+        "data-goal": "LG-04"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "839",
+            "y": "290",
+            "width": "620",
+            "height": "860",
+            "rx": "15",
+            "fill": "#fff",
+            "stroke": "#dedbd4"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "854",
+            "y": "314",
+            "class": "lane-id"
+          },
+          "text": "LG-04"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "854",
+            "y": "337",
+            "class": "lane-heading"
+          },
+          "text": "Develop AI applications"
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "lane-bg",
+        "data-goal": "LG-05"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1471",
+            "y": "290",
+            "width": "431",
+            "height": "698",
+            "rx": "15",
+            "fill": "#fff",
+            "stroke": "#dedbd4"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1486",
+            "y": "314",
+            "class": "lane-id"
+          },
+          "text": "LG-05"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1486",
+            "y": "337",
+            "class": "lane-heading"
+          },
+          "text": "Use, evaluate and"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1486",
+            "y": "355",
+            "class": "lane-heading"
+          },
+          "text": "deploy AI models"
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F01",
+        "data-b": "F02"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "960,100 960,165",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F01",
+        "data-b": "U01"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "960,119 215,119 215,357 120,357 120,369",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F01",
+        "data-b": "M01"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "960,119 1892,119 1892,357 1793,357 1793,369",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "960",
+        "cy": "119",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F02",
+        "data-b": "R01"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "960,232 960,262 440,262 440,411 427,411",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F02",
+        "data-b": "R02"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "440,411 440,549 427,549",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F02",
+        "data-b": "S01-C"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "960,262 818,262 818,353 560,353 560,369",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F02",
+        "data-b": "S01-O"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "732,353 732,369",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "F02",
+        "data-b": "A01"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "960,262 1446,262 1446,352 1146,352 1146,369",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "960",
+        "cy": "262",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "818",
+        "cy": "262",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "440",
+        "cy": "411",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "732",
+        "cy": "353",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "S01-C",
+        "data-b": "gate-cli"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "560,452 560,472 646,472 646,490",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-alternative)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "S01-O",
+        "data-b": "gate-cli"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "732,452 732,472 646,472",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "646",
+        "cy": "472",
+        "r": "3.3",
+        "fill": "#007d7a"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "gate-cli",
+        "data-b": "S02"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "646,525 646,549 560,549 560,570",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-alternative)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "gate-cli",
+        "data-b": "S03"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "646,549 732,549 732,570",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-alternative)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "646",
+        "cy": "549",
+        "r": "3.3",
+        "fill": "#007d7a"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S02",
+        "data-b": "S04"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "560,663 560,688 646,688 646,712",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S03",
+        "data-b": "S04"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "732,663 732,688 646,688 646,712",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "646",
+        "cy": "688",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S04",
+        "data-b": "S05"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "646,795 646,854",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A01",
+        "data-b": "A05"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1146,452 1146,482 943,482 943,509",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A01",
+        "data-b": "A02"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1146,452 1146,509",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A01",
+        "data-b": "A03"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1146,482 1349,482 1349,509",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "1146",
+        "cy": "482",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A01",
+        "data-b": "M03"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1234,411 1486,411",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A02",
+        "data-b": "A06"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1168,592 1168,638 1201,638 1201,664",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A03",
+        "data-b": "A06"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1302,592 1302,638 1201,638 1201,664",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "1201",
+        "cy": "638",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge recommended",
+        "data-a": "A03",
+        "data-b": "A04"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1382,592 1382,664",
+            "fill": "none",
+            "stroke": "#236f9d",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "stroke-dasharray": "7 5",
+            "marker-end": "url(#end-recommended)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "A02",
+        "data-b": "gate-eval"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1080,592 1080,785 1048,785 1048,803",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-alternative)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "A05",
+        "data-b": "gate-eval"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "943,592 943,785 1048,785",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "A06",
+        "data-b": "gate-eval"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1201,747 1201,785 1080,785",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "1048",
+        "cy": "785",
+        "r": "3.3",
+        "fill": "#007d7a"
+      }
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "1080",
+        "cy": "785",
+        "r": "3.3",
+        "fill": "#007d7a"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge alternative",
+        "data-a": "gate-eval",
+        "data-b": "A07"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1048,838 1048,854",
+            "fill": "none",
+            "stroke": "#007d7a",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-alternative)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A07",
+        "data-b": "A08"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1136,896 1167,896",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "M01",
+        "data-b": "M02"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1793,452 1793,529",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "M02",
+        "data-b": "M04"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1793,612 1793,669 1750,669 1750,704",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge conditional",
+        "data-a": "M03",
+        "data-b": "M04"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1574,452 1574,669 1638,669 1638,704",
+            "fill": "none",
+            "stroke": "#946c35",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "stroke-dasharray": "7 5",
+            "marker-end": "url(#end-conditional)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "text",
+      "attrs": {
+        "x": "1585",
+        "y": "640",
+        "class": "condition-text"
+      },
+      "text": "LLM only"
+    },
+    {
+      "tag": "text",
+      "attrs": {
+        "x": "1370",
+        "y": "624",
+        "text-anchor": "end",
+        "class": "recommend-text"
+      },
+      "text": "Recommended"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "choice-gate",
+        "data-gate": "cli"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "556",
+            "y": "490",
+            "width": "180",
+            "height": "35",
+            "rx": "17.5",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.5"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "646.0",
+            "y": "512",
+            "text-anchor": "middle",
+            "class": "gate-text"
+          },
+          "text": "OR · choose one CLI"
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "choice-gate",
+        "data-gate": "eval"
+      },
+      "children": [
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "943",
+            "y": "803",
+            "width": "210",
+            "height": "35",
+            "rx": "17.5",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.5"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1048.0",
+            "y": "825",
+            "text-anchor": "middle",
+            "class": "gate-text"
+          },
+          "text": "OR · one application"
+        }
+      ]
+    },
+    {
+      "tag": "text",
+      "attrs": {
+        "x": "495",
+        "y": "983",
+        "class": "foundation-caption"
+      },
+      "text": "ADVANCED EXTENSIONS"
+    },
+    {
+      "tag": "text",
+      "attrs": {
+        "x": "860",
+        "y": "983",
+        "class": "foundation-caption"
+      },
+      "text": "ADVANCED EXTENSION"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S04",
+        "data-b": "S06"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "520,754 475,754 475,1000 560,1000 560,1029",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S05",
+        "data-b": "S07"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "772,900 818,900 818,1000 732,1000 732,1029",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S05",
+        "data-b": "S08"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "818,1000 818,1201 812,1201",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S04",
+        "data-b": "S09"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "475,1000 475,1341 480,1341",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "S06",
+        "data-b": "S10"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "560,1112 560,1159",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "flow-edge required",
+        "data-a": "A06",
+        "data-b": "A09"
+      },
+      "children": [
+        {
+          "tag": "polyline",
+          "attrs": {
+            "points": "1250,747 1250,772 1450,772 1450,1071 1403,1071",
+            "fill": "none",
+            "stroke": "#546970",
+            "stroke-width": "2.2",
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "marker-end": "url(#end-required)"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "475",
+        "cy": "1000",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "circle",
+      "attrs": {
+        "cx": "818",
+        "cy": "1000",
+        "r": "3.3",
+        "fill": "#546970"
+      }
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "F01",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "AI Fundamentals for Researchers — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "AI Fundamentals for Researchers"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "826",
+            "y": "34",
+            "width": "268",
+            "height": "66",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "838",
+            "y": "55",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "F01"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1082",
+            "y": "55",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "838",
+            "y": "77",
+            "class": "node-title"
+          },
+          "text": "AI Fundamentals for Researchers"
+        }
+      ],
+      "course_id": "F01",
+      "baseline_title": "AI Fundamentals for Researchers"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "F02",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Generative AI Fundamentals and Prompting — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Generative AI Fundamentals and Prompting"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "826",
+            "y": "166",
+            "width": "268",
+            "height": "66",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "838",
+            "y": "187",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "F02"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1082",
+            "y": "187",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "838",
+            "y": "209",
+            "class": "node-title"
+          },
+          "text": "Generative AI and Prompting"
+        }
+      ],
+      "course_id": "F02",
+      "baseline_title": "Generative AI Fundamentals and Prompting"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "U01",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Assessing AI Opportunities — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Assessing AI Opportunities"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "35",
+            "y": "370",
+            "width": "170",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "47",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "U01"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "193",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "47",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "Assessing AI"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "47",
+            "y": "430",
+            "class": "node-title"
+          },
+          "text": "Opportunities"
+        }
+      ],
+      "course_id": "U01",
+      "baseline_title": "Assessing AI Opportunities"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "R01",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "AI for Research Workflows — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "AI for Research Workflows"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "252",
+            "y": "370",
+            "width": "174",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "R01"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "414",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "AI for Research"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "430",
+            "class": "node-title"
+          },
+          "text": "Workflows"
+        }
+      ],
+      "course_id": "R01",
+      "baseline_title": "AI for Research Workflows"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "R02",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Prompting and Evaluating Multimodal AI Models — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Prompting and Evaluating Multimodal AI Models"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "252",
+            "y": "500",
+            "width": "174",
+            "height": "98",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "521",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "R02"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "414",
+            "y": "521",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "543",
+            "class": "node-title"
+          },
+          "text": "Prompting and"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "560",
+            "class": "node-title"
+          },
+          "text": "Evaluating"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "264",
+            "y": "577",
+            "class": "node-title"
+          },
+          "text": "Multimodal AI"
+        }
+      ],
+      "course_id": "R02",
+      "baseline_title": "Prompting and Evaluating Multimodal AI Models"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S01-C",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Getting Started with Claude Code CLI — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Getting Started with Claude Code CLI"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "481",
+            "y": "370",
+            "width": "158",
+            "height": "82",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "S01-C"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "627",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "Claude Code CLI"
+        }
+      ],
+      "course_id": "S01-C",
+      "baseline_title": "Getting Started with Claude Code CLI"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S01-O",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Getting Started with Codex CLI — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Getting Started with Codex CLI"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "653",
+            "y": "370",
+            "width": "158",
+            "height": "82",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "S01-O"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "799",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "Codex CLI"
+        }
+      ],
+      "course_id": "S01-O",
+      "baseline_title": "Getting Started with Codex CLI"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S02",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Context Engineering and Agent Skills — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Context Engineering and Agent Skills"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "481",
+            "y": "571",
+            "width": "158",
+            "height": "92",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "592",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "S02"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "627",
+            "y": "592",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "614",
+            "class": "node-title"
+          },
+          "text": "Context Engineering"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "631",
+            "class": "node-title"
+          },
+          "text": "and Agent Skills"
+        }
+      ],
+      "course_id": "S02",
+      "baseline_title": "Context Engineering and Agent Skills"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S03",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Agentic Test-Driven Development — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Agentic Test-Driven Development"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "653",
+            "y": "571",
+            "width": "158",
+            "height": "92",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "592",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "S03"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "799",
+            "y": "592",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "614",
+            "class": "node-title"
+          },
+          "text": "Agentic Test-"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "631",
+            "class": "node-title"
+          },
+          "text": "Driven Development"
+        }
+      ],
+      "course_id": "S03",
+      "baseline_title": "Agentic Test-Driven Development"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S04",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Quality Assurance in the Age of AI — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Quality Assurance in the Age of AI"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "520",
+            "y": "713",
+            "width": "252",
+            "height": "82",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "532",
+            "y": "734",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "S04"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "760",
+            "y": "734",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "532",
+            "y": "756",
+            "class": "node-title"
+          },
+          "text": "Quality Assurance"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "532",
+            "y": "773",
+            "class": "node-title"
+          },
+          "text": "in the Age of AI"
+        }
+      ],
+      "course_id": "S04",
+      "baseline_title": "Quality Assurance in the Age of AI"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S05",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "From Code Generation to Control: Engineering Reliable Software with AI — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "From Code Generation to Control: Engineering Reliable Software with AI"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "520",
+            "y": "855",
+            "width": "252",
+            "height": "98",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "532",
+            "y": "876",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "S05"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "760",
+            "y": "876",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "532",
+            "y": "898",
+            "class": "node-title"
+          },
+          "text": "From Code Generation"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "532",
+            "y": "915",
+            "class": "node-title"
+          },
+          "text": "to Control"
+        }
+      ],
+      "course_id": "S05",
+      "baseline_title": "From Code Generation to Control: Engineering Reliable Software with AI"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A01",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Programmatic LLM Interaction — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Programmatic LLM Interaction"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1058",
+            "y": "370",
+            "width": "176",
+            "height": "82",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1070",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "A01"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1222",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1070",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "Programmatic LLM"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1070",
+            "y": "430",
+            "class": "node-title"
+          },
+          "text": "Interaction"
+        }
+      ],
+      "course_id": "A01",
+      "baseline_title": "Programmatic LLM Interaction"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A05",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Building RAG Systems — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Building RAG Systems"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "855",
+            "y": "510",
+            "width": "176",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "867",
+            "y": "531",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A05"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1019",
+            "y": "531",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "867",
+            "y": "553",
+            "class": "node-title"
+          },
+          "text": "Building RAG"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "867",
+            "y": "570",
+            "class": "node-title"
+          },
+          "text": "Systems"
+        }
+      ],
+      "course_id": "A05",
+      "baseline_title": "Building RAG Systems"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A02",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Structured Outputs and Workflows — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Structured Outputs and Workflows"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1058",
+            "y": "510",
+            "width": "176",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1070",
+            "y": "531",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A02"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1222",
+            "y": "531",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1070",
+            "y": "553",
+            "class": "node-title"
+          },
+          "text": "Structured Outputs"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1070",
+            "y": "570",
+            "class": "node-title"
+          },
+          "text": "and Workflows"
+        }
+      ],
+      "course_id": "A02",
+      "baseline_title": "Structured Outputs and Workflows"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A03",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Tool Calling — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Tool Calling"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1261",
+            "y": "510",
+            "width": "176",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1273",
+            "y": "531",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A03"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1425",
+            "y": "531",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1273",
+            "y": "553",
+            "class": "node-title"
+          },
+          "text": "Tool Calling"
+        }
+      ],
+      "course_id": "A03",
+      "baseline_title": "Tool Calling"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A06",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Building AI Agents — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Building AI Agents"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1113",
+            "y": "665",
+            "width": "176",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1125",
+            "y": "686",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A06"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1277",
+            "y": "686",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1125",
+            "y": "708",
+            "class": "node-title"
+          },
+          "text": "Building AI Agents"
+        }
+      ],
+      "course_id": "A06",
+      "baseline_title": "Building AI Agents"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A04",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "MCP for Research Software — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "MCP for Research Software"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1298",
+            "y": "665",
+            "width": "139",
+            "height": "98",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1310",
+            "y": "686",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "A04"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1425",
+            "y": "686",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1310",
+            "y": "708",
+            "class": "node-title"
+          },
+          "text": "MCP for"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1310",
+            "y": "725",
+            "class": "node-title"
+          },
+          "text": "Research"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1310",
+            "y": "742",
+            "class": "node-title"
+          },
+          "text": "Software"
+        }
+      ],
+      "course_id": "A04",
+      "baseline_title": "MCP for Research Software"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A07",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "AI Application Evaluation — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "AI Application Evaluation"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "960",
+            "y": "855",
+            "width": "176",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "972",
+            "y": "876",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A07"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1124",
+            "y": "876",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "972",
+            "y": "898",
+            "class": "node-title"
+          },
+          "text": "AI Application"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "972",
+            "y": "915",
+            "class": "node-title"
+          },
+          "text": "Evaluation"
+        }
+      ],
+      "course_id": "A07",
+      "baseline_title": "AI Application Evaluation"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A08",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Deploying AI Applications — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Deploying AI Applications"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1168",
+            "y": "855",
+            "width": "234",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1180",
+            "y": "876",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A08"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1390",
+            "y": "876",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1180",
+            "y": "898",
+            "class": "node-title"
+          },
+          "text": "Deploying AI Applications"
+        }
+      ],
+      "course_id": "A08",
+      "baseline_title": "Deploying AI Applications"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "M03",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Local LLM Inference — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Local LLM Inference"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1487",
+            "y": "370",
+            "width": "175",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1499",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "M03"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1650",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1499",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "Local LLM"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1499",
+            "y": "430",
+            "class": "node-title"
+          },
+          "text": "Inference"
+        }
+      ],
+      "course_id": "M03",
+      "baseline_title": "Local LLM Inference"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "M01",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Using Pretrained ML and DL Models — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Using Pretrained ML and DL Models"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1703",
+            "y": "370",
+            "width": "181",
+            "height": "82",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1715",
+            "y": "391",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "M01"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1872",
+            "y": "391",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1715",
+            "y": "413",
+            "class": "node-title"
+          },
+          "text": "Using Pretrained"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1715",
+            "y": "430",
+            "class": "node-title"
+          },
+          "text": "ML and DL Models"
+        }
+      ],
+      "course_id": "M01",
+      "baseline_title": "Using Pretrained ML and DL Models"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "M02",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Model Evaluation — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Model Evaluation"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1703",
+            "y": "530",
+            "width": "181",
+            "height": "82",
+            "rx": "11",
+            "fill": "#e1f3ee",
+            "stroke": "#007d7a",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1715",
+            "y": "551",
+            "class": "node-id",
+            "fill": "#007d7a"
+          },
+          "text": "M02"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1872",
+            "y": "551",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#007d7a"
+          },
+          "text": "MVP"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1715",
+            "y": "573",
+            "class": "node-title"
+          },
+          "text": "Model Evaluation"
+        }
+      ],
+      "course_id": "M02",
+      "baseline_title": "Model Evaluation"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "M04",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Model Serving and Deployment — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Model Serving and Deployment"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1585",
+            "y": "705",
+            "width": "224",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1597",
+            "y": "726",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "M04"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1797",
+            "y": "726",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1597",
+            "y": "748",
+            "class": "node-title"
+          },
+          "text": "Model Serving"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1597",
+            "y": "765",
+            "class": "node-title"
+          },
+          "text": "and Deployment"
+        }
+      ],
+      "course_id": "M04",
+      "baseline_title": "Model Serving and Deployment"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S06",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Harness Engineering — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Harness Engineering"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "481",
+            "y": "1030",
+            "width": "158",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1051",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "S06"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "627",
+            "y": "1051",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1073",
+            "class": "node-title"
+          },
+          "text": "Harness"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1090",
+            "class": "node-title"
+          },
+          "text": "Engineering"
+        }
+      ],
+      "course_id": "S06",
+      "baseline_title": "Harness Engineering"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S07",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Multi-Agent Orchestration — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Multi-Agent Orchestration"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "653",
+            "y": "1030",
+            "width": "158",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "1051",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "S07"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "799",
+            "y": "1051",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "1073",
+            "class": "node-title"
+          },
+          "text": "Multi-Agent"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "1090",
+            "class": "node-title"
+          },
+          "text": "Orchestration"
+        }
+      ],
+      "course_id": "S07",
+      "baseline_title": "Multi-Agent Orchestration"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S08",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Agentic CI/CD — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Agentic CI/CD"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "653",
+            "y": "1160",
+            "width": "158",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "1181",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "S08"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "799",
+            "y": "1181",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "665",
+            "y": "1203",
+            "class": "node-title"
+          },
+          "text": "Agentic CI/CD"
+        }
+      ],
+      "course_id": "S08",
+      "baseline_title": "Agentic CI/CD"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S09",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Automated Code Review — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Automated Code Review"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "481",
+            "y": "1300",
+            "width": "158",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1321",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "S09"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "627",
+            "y": "1321",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1343",
+            "class": "node-title"
+          },
+          "text": "Automated"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1360",
+            "class": "node-title"
+          },
+          "text": "Code Review"
+        }
+      ],
+      "course_id": "S09",
+      "baseline_title": "Automated Code Review"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "S10",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Agent Performance and Benchmarking — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Agent Performance and Benchmarking"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "481",
+            "y": "1160",
+            "width": "158",
+            "height": "98",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1181",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "S10"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "627",
+            "y": "1181",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1203",
+            "class": "node-title"
+          },
+          "text": "Agent Performance"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "493",
+            "y": "1220",
+            "class": "node-title"
+          },
+          "text": "and Benchmarking"
+        }
+      ],
+      "course_id": "S10",
+      "baseline_title": "Agent Performance and Benchmarking"
+    },
+    {
+      "tag": "g",
+      "attrs": {
+        "class": "course-node course-link",
+        "data-id": "A09",
+        "tabindex": "0",
+        "role": "button",
+        "aria-label": "Security Engineering for AI Agents — open course details"
+      },
+      "children": [
+        {
+          "tag": "title",
+          "attrs": {},
+          "text": "Security Engineering for AI Agents"
+        },
+        {
+          "tag": "rect",
+          "attrs": {
+            "x": "1168",
+            "y": "1030",
+            "width": "234",
+            "height": "82",
+            "rx": "11",
+            "fill": "#eaf3f8",
+            "stroke": "#397c9f",
+            "stroke-width": "1.7"
+          }
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1180",
+            "y": "1051",
+            "class": "node-id",
+            "fill": "#397c9f"
+          },
+          "text": "A09"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1390",
+            "y": "1051",
+            "text-anchor": "end",
+            "class": "node-status",
+            "fill": "#397c9f"
+          },
+          "text": "FUTURE"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1180",
+            "y": "1073",
+            "class": "node-title"
+          },
+          "text": "Security Engineering"
+        },
+        {
+          "tag": "text",
+          "attrs": {
+            "x": "1180",
+            "y": "1090",
+            "class": "node-title"
+          },
+          "text": "for AI Agents"
+        }
+      ],
+      "course_id": "A09",
+      "baseline_title": "Security Engineering for AI Agents"
+    }
+  ]
+}

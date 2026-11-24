@@ -1,0 +1,51 @@
+{
+  "id": "F01",
+  "name": "AI Fundamentals for Researchers",
+  "goal": "F",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "academic",
+    "technical"
+  ],
+  "outcome": "Identify suitable AI approaches, their limitations and when AI is not appropriate.",
+  "description": "An accessible introduction to artificial intelligence, traditional machine learning, deep learning and generative AI. Explore research use cases, distinguish model capabilities from limitations, and decide when conventional methods are more appropriate.",
+  "external": "No technical prerequisites; basic digital literacy.",
+  "prior": [
+    "Basic digital literacy",
+    "No programming required"
+  ],
+  "learn": [
+    "Distinguish ML, deep learning and generative AI",
+    "Identify suitable research use cases and non-AI alternatives",
+    "Recognize uncertainty, bias and data protection risks"
+  ],
+  "tools": [
+    "Approved AI assistant (optional)",
+    "Research use-case worksheet"
+  ],
+  "modules": [
+    "AI landscape and model types",
+    "Capabilities and limitations",
+    "Research use cases and decision exercise",
+    "Responsible use and self-assessment"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Compare classification, regression, deep learning and generative tasks using research examples.",
+    "Recognize unreliable outputs, distribution shift and the limits of model predictions.",
+    "Choose an AI or conventional method for a small scientific problem.",
+    "Check data sensitivity, bias and accountability; record your decision."
+  ],
+  "instructors": [],
+  "references": [
+    "google",
+    "nist",
+    "era",
+    "unesco"
+  ],
+  "prerequisiteRationale": "Entry point: no internal prerequisite.",
+  "duration_minutes": 240
+}

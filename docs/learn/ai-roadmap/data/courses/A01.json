@@ -1,0 +1,52 @@
+{
+  "id": "A01",
+  "name": "Programmatic LLM Interaction",
+  "goal": "LG-04",
+  "mvp": 1,
+  "roles": [
+    "students",
+    "researchers",
+    "technical"
+  ],
+  "outcome": "Access an LLM programmatically and handle its responses safely.",
+  "description": "Call an existing language model from Python through an API or compatible interface. Configure requests, handle responses and errors, protect credentials and record relevant model settings.",
+  "external": "Basic Python, command-line use, package environments and basic HTTP/JSON concepts.",
+  "prior": [
+    "Basic Python",
+    "Command-line use and package environments",
+    "Basic HTTP and JSON concepts"
+  ],
+  "learn": [
+    "Send model requests from Python and interpret responses",
+    "Handle errors, timeouts and credentials safely",
+    "Record model identifiers and request settings"
+  ],
+  "tools": [
+    "Python",
+    "HTTPX",
+    "Local or institutional model endpoint"
+  ],
+  "modules": [
+    "Model interfaces and request structure",
+    "Calling a model from Python",
+    "Error handling and credentials",
+    "Repeatable inference and output checks"
+  ],
+  "coverage": "Limited",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Inspect an OpenAI-compatible request, response and model configuration.",
+    "Send a Python request to a supplied local or institutional endpoint.",
+    "Handle timeouts, HTTP errors and credentials without exposing secrets.",
+    "Record request settings, validate responses and rerun a small experiment."
+  ],
+  "instructors": [],
+  "references": [
+    "httpx",
+    "llamaserver",
+    "prompt",
+    "nist"
+  ],
+  "prerequisiteRationale": "F02 supplies prompt design and model-response literacy; A01 introduces the programmatic interface.",
+  "duration_minutes": 240
+}

@@ -1,0 +1,51 @@
+{
+  "id": "U01",
+  "name": "Assessing AI Opportunities",
+  "goal": "LG-01",
+  "mvp": 0,
+  "roles": [
+    "students",
+    "researchers",
+    "academic",
+    "technical"
+  ],
+  "outcome": "Assess potential AI use cases, limitations, risks and feasibility.",
+  "description": "Assess the suitability of AI for a scientific problem or research group. Compare expected benefits, feasibility, data requirements, risks and the option of not using AI.",
+  "external": "Familiarity with a research problem or workflow; no programming required.",
+  "prior": [
+    "Familiarity with a research problem",
+    "No programming required"
+  ],
+  "learn": [
+    "Identify candidate AI tasks and conventional alternatives",
+    "Assess feasibility, data requirements and risks",
+    "Define success criteria and decide whether SSC support is needed"
+  ],
+  "tools": [
+    "AI suitability worksheet",
+    "Risk and feasibility checklist"
+  ],
+  "modules": [
+    "Problem framing",
+    "AI versus conventional approaches",
+    "Feasibility and risk assessment",
+    "Evidence-based decision exercise"
+  ],
+  "coverage": "Partial",
+  "courseType": "Focused",
+  "moduleDescriptions": [
+    "Define a research question, success criteria and current workflow.",
+    "Compare AI, conventional algorithms and manual methods against a baseline.",
+    "Assess data quality, resource needs, licensing, risk and cost.",
+    "Write a short go/no-go recommendation with evidence and limitations."
+  ],
+  "instructors": [],
+  "references": [
+    "nist",
+    "era",
+    "cards",
+    "google"
+  ],
+  "prerequisiteRationale": "F01 provides AI/non-AI distinctions needed for a feasibility decision.",
+  "duration_minutes": 240
+}
