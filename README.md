@@ -39,6 +39,13 @@ single dependency lockfile. See the
 [developer guide](docs/community/contribute-codebase.md#dependency-management)
 for adding, removing, or updating dependencies.
 
+## Project guidance
+
+- [Agent instructions](AGENTS.md) preserve repository working constraints.
+- [Architecture](ARCHITECTURE.md) describes integration, module boundaries and limitations.
+- [Curriculum specification](CURRICULUM.md) records design constraints and prerequisite semantics.
+- [Contributor guide](docs/community/contribute-codebase.md) covers setup and course authoring.
+
 ## Curriculum validation
 
 The tests validate the public AI Roadmap and exercise malformed copies of its
