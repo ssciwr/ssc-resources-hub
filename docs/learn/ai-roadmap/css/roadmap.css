@@ -258,7 +258,7 @@
 .ssc-roadmap .full-map .course-link:hover>rect, .ssc-roadmap .full-map .course-link:focus-visible>rect, .ssc-roadmap .full-map .course-link.selected>rect{stroke:#c61826;stroke-width:3}
 .ssc-roadmap .full-map .lane-bg.dim{opacity:.42}
 .ssc-roadmap .full-map .choice-gate.dim{opacity:.22}
-.ssc-roadmap .full-map .course-link.dim:hover{opacity:1}
+.ssc-roadmap .full-map .course-link.dim:hover, .ssc-roadmap .full-map .course-link.dim:focus-visible{opacity:1}
 .ssc-roadmap .map-zoom{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .ssc-roadmap .map-zoom button{min-height:34px;min-width:34px;padding:5px 10px}
 .ssc-roadmap .map-zoom output{font-variant-numeric:tabular-nums;min-width:45px;text-align:center}

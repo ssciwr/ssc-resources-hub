@@ -267,6 +267,27 @@ def test_keyboard_prerequisite_navigation_keeps_focus(roadmap):
     expect(node).to_be_focused()
 
 
+def test_keyboard_focus_restores_dimmed_course_visibility(roadmap):
+    roadmap.locator("#goal").select_option("LG-01")
+    roadmap.mouse.move(0, 0)
+    node = roadmap.locator('.course-link[data-id="F02"]')
+    expect(node).to_have_css("opacity", "0.2")
+    roadmap.locator("#actualSize").focus()
+    roadmap.keyboard.press("Tab")
+    expect(roadmap.locator('.course-link[data-id="F01"]')).to_be_focused()
+    roadmap.keyboard.press("Tab")
+    expect(node).to_be_focused()
+    expect(node).to_have_css("opacity", "1")
+    expect(node).to_have_class(re.compile(r"\bdim\b"))
+    roadmap.keyboard.press("Enter")
+    expect(roadmap.locator("#detailTitle")).to_have_text(COURSES["F02"]["name"])
+    roadmap.keyboard.press("Escape")
+    expect(node).to_be_focused()
+    expect(node).to_have_css("opacity", "1")
+    roadmap.keyboard.press("Tab")
+    expect(node).to_have_css("opacity", "0.2")
+
+
 def test_keyboard_audience_picker(roadmap):
     roadmap.locator("#roleToggle").focus()
     roadmap.keyboard.press("Enter")
