@@ -19,4 +19,4 @@ export const edges = Object.entries(dependencies).flatMap(([target,d]) => [
   ...d.recommended.map(id=>[id,target,'','recommended']),
   ...d.conditional.map(({course,when})=>[course,target,when,'conditional'])
 ]);
-export { goals, dependencies, referenceLibrary, layout };
+export { manifest, goals, audiences, dependencies, referenceLibrary, layout };

@@ -1,7 +1,7 @@
 import {$,escapeHtml} from './dom.js';
 import {roles} from './data-loader.js';
 import {prereq,alternatives,recommendations,conditionalPrerequisites} from './dependencies.js';
-export function audience(c){return c.roles.length===4?'All learners':c.roles.map(r=>roles[r]).join(', ')}
+export function audience(c){return c.roles.length===Object.keys(roles).length?'All learners':c.roles.map(r=>roles[r]).join(', ')}
 
 function prerequisiteSummary(id) {
   const choices = alternatives(id);

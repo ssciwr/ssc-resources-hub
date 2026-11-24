@@ -67,6 +67,15 @@ and reverse "Enables" links read those records without course-specific frontend
 rules. Diagram geometry and abbreviated labels remain in `data/layout.json`;
 relationship changes must keep that layout and the reviewed baseline consistent.
 
+Live summary counts and version labels come from the manifest, courses and
+learning goals; audience controls and definitions share `data/audiences.json`.
+The manifest's `equivalent_course_groups` records confirmed competency equivalence
+for counting distinct MVP competencies. It is separate from prerequisite OR groups:
+different valid routes into a subsequent course are not automatically equivalent.
+Groups must contain existing course IDs and must not overlap. The migration
+baseline declares only the two CLI courses as equivalent. Duration displays use
+course duration caps, which still require timed delivery review.
+
 Only declared public fields and listed data files are allowed. This guards
 against accidental extra fields or files; it cannot determine whether prose in
 an allowed field is confidential. Publication rights, teaching readiness, actual

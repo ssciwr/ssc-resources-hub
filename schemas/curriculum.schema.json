@@ -24,6 +24,18 @@
         "baseline": {
           "$ref": "#/$defs/text"
         },
+        "equivalent_course_groups": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/course-id"
+            },
+            "minItems": 2,
+            "uniqueItems": true
+          }
+        },
         "course_ids": {
           "type": "array",
           "items": {
@@ -36,6 +48,7 @@
       "required": [
         "version",
         "baseline",
+        "equivalent_course_groups",
         "course_ids"
       ],
       "additionalProperties": false

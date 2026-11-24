@@ -381,11 +381,11 @@ def test_conditional_only_prerequisite_does_not_say_none(roadmap):
 INJECTION_TEXT = '<img data-injected src="data:," onerror="window.__roadmapXss = true">'
 
 
-def reload_records(page, records):
+def reload_records(page, records, expected_count=29):
     for filename, record in records.items():
         page.route(f"**/data/{filename}", lambda route, request, value=record: route.fulfill(json=value))
     page.reload(wait_until="domcontentloaded")
-    expect(page.locator("#catalogue tr")).to_have_count(29)
+    expect(page.locator("#catalogue tr")).to_have_count(expected_count)
 
 
 def assert_no_injected_markup(page):
@@ -506,3 +506,66 @@ def test_noncourse_hash_does_not_open_dialog(roadmap, roadmap_url, fragment):
     expect(roadmap.locator("#catalogue tr")).to_have_count(29)
     expect(roadmap.locator("#detail")).to_be_hidden()
     expect(roadmap.locator("#roadmapError")).to_be_hidden()
+
+
+def test_summary_preserves_current_curriculum_facts(roadmap):
+    for element, expected in [("courseCount", "29"), ("mvpCount", "13"),
+                              ("goalCount", "5"), ("durationCap", "4h")]:
+        expect(roadmap.locator(f"#{element}")).to_have_text(expected)
+    expect(roadmap.locator("#mvpSummary")).to_have_text("MVP options (12 distinct competencies)")
+    roadmap.locator("#goal").select_option("LG-01")
+    expect(roadmap.locator("#courseCount")).to_have_text("29")
+    expect(roadmap.locator("#mvpCount")).to_have_text("13")
+
+
+@pytest.mark.parametrize("updates,options,competencies", [
+    ({"S01-O": 0}, 12, 12),
+    ({"A02": 1}, 14, 13),
+    ({"A02": 1, "A05": 1}, 15, 14),
+])
+def test_summary_uses_explicit_equivalence(roadmap, updates, options, competencies):
+    records = {f"courses/{key}.json": {**COURSES[key], "mvp": value} for key, value in updates.items()}
+    reload_records(roadmap, records)
+    expect(roadmap.locator("#mvpCount")).to_have_text(str(options))
+    expect(roadmap.locator("#mvpSummary")).to_contain_text(f"{competencies} distinct competencies")
+
+
+def test_manifest_updates_summary_and_version(roadmap):
+    manifest = json.loads((DATA / "roadmap.json").read_text())
+    manifest.update(version="2.0-preview", baseline="0.16")
+    manifest["course_ids"].append("X01")
+    course = {**COURSES["A01"], "id": "X01", "name": "Test-only course option", "mvp": 0}
+    layout = json.loads((DATA / "layout.json").read_text())
+    original = next(e for e in layout["elements"] if e.get("course_id") == "A01")
+    node = json.loads(json.dumps(original))
+    node["course_id"] = "X01"
+    node["attrs"]["data-id"] = "X01"
+    next(child for child in node["children"] if child["attrs"].get("class") == "node-id")["text"] = "X01"
+    layout["elements"].append(node)
+    reload_records(roadmap, {"roadmap.json": manifest, "courses/X01.json": course,
+                            "layout.json": layout}, expected_count=30)
+    expect(roadmap.locator("#courseCount")).to_have_text("30")
+    expect(roadmap.locator(".course-link")).to_have_count(30)
+    for element in ["roadmapVersion", "roadmapFooterVersion"]:
+        expect(roadmap.locator(f"#{element}")).to_have_text("v2.0 preview · Curriculum v0.16")
+
+
+def test_audience_definitions_follow_registry(roadmap):
+    audiences = json.loads((DATA / "audiences.json").read_text())
+    audiences["researchers"] = {"label": "Research audience <test>", "help": "Updated & verified test description"}
+    reload_records(roadmap, {"audiences.json": audiences})
+    roadmap.locator("summary").filter(has_text=re.compile(r"^Intended learners$")).click()
+    definitions = roadmap.locator("#audienceDefinitions")
+    expect(definitions.locator("dt")).to_have_text([a["label"] for a in audiences.values()])
+    expect(definitions.locator("dd")).to_have_text([a["help"] for a in audiences.values()])
+    choose_audience(roadmap, "researchers")
+    expect(roadmap.locator("#roleLabel")).to_have_text(audiences["researchers"]["label"])
+
+
+@pytest.mark.parametrize("minutes,compact,detail", [(60, "1h", "1 hour"), (90, "90min", "90 minutes"), (120, "2h", "2 hours")])
+def test_summary_duration_uses_course_caps(roadmap, minutes, compact, detail):
+    records = {f"courses/{key}.json": {**course, "duration_minutes": minutes} for key, course in COURSES.items()}
+    reload_records(roadmap, records)
+    expect(roadmap.locator("#durationCap")).to_have_text(compact)
+    open_course(roadmap, "A01")
+    expect(roadmap.locator("#detailMeta")).to_contain_text(f"Up to {detail}")

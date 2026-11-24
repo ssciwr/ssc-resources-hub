@@ -30,12 +30,15 @@ function instructorSection(course) {
 export function openCourse(id) {
   if (!Object.hasOwn(byId, id)) return;
   const c = byId[id];
+  const hours = c.duration_minutes / 60;
+  const duration = c.duration_minutes % 60 === 0
+    ? `${hours} ${hours === 1 ? 'hour' : 'hours'}` : `${c.duration_minutes} minutes`;
   for (const element of canvas.querySelectorAll('.course-link')) {
     element.classList.toggle('selected', element.dataset.id === id);
   }
   $('detailMeta').innerHTML = `<div class="detail-kicker">
     <span class="tag ${c.mvp ? 'mvp' : ''}">${c.mvp ? 'MVP candidate' : 'Future course'}</span>
-    <span>${h(c.id)} · ${h(goals[c.goal])}</span><span class="sep">|</span><span>Up to 4 hours</span>
+    <span>${h(c.id)} · ${h(goals[c.goal])}</span><span class="sep">|</span><span>Up to ${h(duration)}</span>
   </div>`;
   $('detailTitle').textContent = c.name;
   const bullets = items => `<ul class="detail-list">${items.map(item => `<li>${h(item)}</li>`).join('')}</ul>`;
@@ -79,7 +82,7 @@ export function openCourse(id) {
     ).join('')}</ol></section>
     ${c.practice ? `<section class="detail-section"><h3>Practical project</h3><p>${h(c.practice)}</p><h4>Acceptance criteria</h4><p>${h(c.acceptance)}</p></section>` : ''}
     <div class="detail-bottom">
-      <section class="detail-section"><h3>Intended learners</h3><p>${h(c.roles.length === 4 ? 'All learner categories' : c.roles.map(role => roles[role]).join(', '))}</p></section>
+      <section class="detail-section"><h3>Intended learners</h3><p>${h(c.roles.length === Object.keys(roles).length ? 'All learner categories' : c.roles.map(role => roles[role]).join(', '))}</p></section>
       <section class="detail-section"><h3>Enables</h3>
         ${next(id).length ? links(next(id)) : altNext(id).length || enabledConditions.length ? '' : links([])}
         ${altNext(id).length ? `<p class="choice-note">One alternative pathway into:</p>${links(altNext(id))}` : ''}

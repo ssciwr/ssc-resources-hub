@@ -288,3 +288,13 @@ def test_reject_unsupported_citation_markup(curriculum, citation):
 def test_reject_unsafe_svg_attributes(curriculum, attrs):
     edit(curriculum, "layout.json", lambda d: d["elements"][1]["attrs"].update(attrs))
     rejects(curriculum, "layout.json")
+
+
+@pytest.mark.parametrize("groups", [
+    [["S01-C"]], [["S01-C", "S01-C"]], [["S01-C", "X99"]],
+    [["S01-C", "S01-O"], ["S01-O", "S02"]],
+    [["A02", "A05", "A06"]], [],
+])
+def test_reject_invalid_equivalent_course_groups(curriculum, groups):
+    edit(curriculum, "roadmap.json", lambda d: d.update(equivalent_course_groups=groups))
+    rejects(curriculum, "roadmap.json")

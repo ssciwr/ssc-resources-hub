@@ -141,6 +141,13 @@ def validate_references(documents):
     actual = {name for name in documents if name.startswith("courses/")}
     require(expected == actual, "roadmap.json/course_ids",
             f"Course files differ: missing {sorted(expected - actual)}, unlisted {sorted(actual - expected)}")
+    equivalent_members = set()
+    for group in documents["roadmap.json"]["equivalent_course_groups"]:
+        require(set(group) <= set(ids), "roadmap.json/equivalent_course_groups",
+                "Equivalent course groups must reference existing courses")
+        require(not equivalent_members.intersection(group), "roadmap.json/equivalent_course_groups",
+                "Equivalent course groups must not overlap")
+        equivalent_members.update(group)
     for course_id in ids:
         filename = f"courses/{course_id}.json"
         course = documents[filename]
@@ -278,6 +285,9 @@ def validate_baseline(documents):
     require(set(documents["audiences.json"]) == {"students", "researchers", "academic", "technical"},
             "audiences.json", "Migration baseline requires the four established audiences")
     cli = {"S01-C", "S01-O"}
+    equivalent = documents["roadmap.json"]["equivalent_course_groups"]
+    require(len(equivalent) == 1 and set(equivalent[0]) == cli, "roadmap.json",
+            "Migration baseline requires the two CLI courses as the sole equivalent course group")
     require(deps["S01-C"] == deps["S01-O"], "dependencies.json", "CLI alternatives must have equivalent prerequisites")
     for target in ("S02", "S03"):
         spec = deps[target]
