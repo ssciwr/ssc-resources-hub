@@ -28,34 +28,13 @@
 .ssc-roadmap select, .ssc-roadmap input{border:1px solid #c4d1df;background:white;color:var(--ink);border-radius:7px;padding:9px 10px;min-width:0;width:100%}
 .ssc-roadmap .btn{background:white;border:1px solid #b9c9db;border-radius:7px;color:var(--navy);font-weight:650;padding:9px 13px}
 .ssc-roadmap .btn:hover{background:#edf4ff}
-.ssc-roadmap .btn:focus-visible, .ssc-roadmap .course:focus-visible, .ssc-roadmap select:focus-visible, .ssc-roadmap input:focus-visible{outline:3px solid #e5a13b;outline-offset:2px}
+.ssc-roadmap .btn:focus-visible, .ssc-roadmap select:focus-visible, .ssc-roadmap input:focus-visible{outline:3px solid #e5a13b;outline-offset:2px}
 .ssc-roadmap .legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:0 20px 13px;font-size:12px;color:var(--muted)}
 .ssc-roadmap .swatch{display:inline-block;width:13px;height:13px;border:1px solid;vertical-align:-2px;margin-right:5px;border-radius:3px}
 .ssc-roadmap .swatch.green{background:var(--greenbg);border-color:#21855e}
 .ssc-roadmap .swatch.blue{background:var(--bluebg);border-color:#6393d3}
 .ssc-roadmap .lineicon{display:inline-block;width:22px;border-top:2px solid #657993;vertical-align:3px;margin-right:5px}
-.ssc-roadmap .lineicon.cross{border-top-style:dashed}
 .ssc-roadmap .graphbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#f9fbfd;flex-wrap:wrap;font-size:13px}
-.ssc-roadmap .zoom{display:flex;gap:6px;align-items:center}
-.ssc-roadmap .zoom button{padding:3px 9px}
-.ssc-roadmap .viewport{overflow:auto;background:#fff;padding:12px;min-height:230px;overscroll-behavior:contain}
-.ssc-roadmap .scale-wrap{position:relative;margin:auto}
-.ssc-roadmap .canvas{width:1600px;height:758px;position:relative;transform-origin:top left;background:#fff}
-.ssc-roadmap .lane{position:absolute;top:245px;height:500px;border:1px solid #dce5ef;border-radius:12px;background:#f8fafc}
-.ssc-roadmap .lane h3{font-size:14px;line-height:1.2;padding:10px 9px 0;color:#314b68;margin:0}
-.ssc-roadmap .lane h3 small{display:block;color:#6b7d91;font-size:10px;font-weight:700;margin-bottom:4px;letter-spacing:.05em}
-.ssc-roadmap .foundation-label{position:absolute;top:13px;left:458px;color:#536d89;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.ssc-roadmap .edges{position:absolute;inset:0;pointer-events:none;overflow:visible}
-.ssc-roadmap .edge{fill:none;stroke:#73869d;stroke-width:1.7;marker-end:url(#arrow);transition:opacity .2s}
-.ssc-roadmap .edge.cross{stroke:#537ab1;stroke-dasharray:5 4;marker-end:url(#crossArrow)}
-.ssc-roadmap .course{position:absolute;text-align:left;border:1.5px solid #6393d3;background:var(--bluebg);border-radius:8px;padding:6px 9px;color:#234f86;display:flex;flex-direction:column;justify-content:center;box-shadow:0 2px 3px #163a5810;transition:opacity .18s,box-shadow .18s;overflow:hidden}
-.ssc-roadmap .course.mvp{border-color:#21855e;background:var(--greenbg);color:#145b40}
-.ssc-roadmap .course:hover{box-shadow:0 0 0 3px #8baac955;z-index:3}
-.ssc-roadmap .course .meta{font-size:10px;line-height:1.1;letter-spacing:.04em;font-weight:800;display:flex;justify-content:space-between;gap:3px;opacity:.85}
-.ssc-roadmap .course .title{font-size:13px;font-weight:700;line-height:1.18;margin-top:4px;overflow-wrap:normal}
-.ssc-roadmap .course.dim{opacity:.19}
-.ssc-roadmap .edge.dim{opacity:.12}
-.ssc-roadmap .course.selected{box-shadow:0 0 0 3px #e5a13b}
 .ssc-roadmap .band{padding:18px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .ssc-roadmap .band strong{margin-right:7px}
 .ssc-roadmap .chip{display:inline-block;background:#f1edf9;color:#5b4385;border:1px solid #ddd2ee;border-radius:6px;padding:5px 9px;font-size:12px;font-weight:650}
@@ -68,7 +47,6 @@
 .ssc-roadmap td a:hover{text-decoration:underline}
 .ssc-roadmap .tag{font-size:11px;font-weight:750;display:inline-block;white-space:nowrap;border-radius:5px;padding:3px 7px;background:var(--bluebg);color:var(--blue)}
 .ssc-roadmap .tag.mvp{background:var(--greenbg);color:var(--green)}
-.ssc-roadmap .muted{color:var(--muted)}
 .ssc-roadmap details{padding:16px 20px}
 .ssc-roadmap summary{cursor:pointer;font-weight:700;color:var(--navy)}
 .ssc-roadmap footer{color:var(--muted);font-size:12px;padding:4px 0 24px}
@@ -90,18 +68,12 @@
 .ssc-roadmap .legend{padding:0 12px 12px}
 .ssc-roadmap .graphbar{padding:8px 12px}
 .ssc-roadmap .stat{min-width:88px}
-.ssc-roadmap .topline{gap:8px}
-.ssc-roadmap .viewport{padding:8px}}
+.ssc-roadmap .topline{gap:8px}}
 @media print{.ssc-roadmap header{background:white;color:#18283d;border-bottom:1px solid #ccc}
 .ssc-roadmap header p, .ssc-roadmap header .eyebrow{color:#53677e}
-.ssc-roadmap .controls, .ssc-roadmap .zoom, .ssc-roadmap .dialog-close, .ssc-roadmap footer{display:none}
+.ssc-roadmap .controls, .ssc-roadmap .dialog-close, .ssc-roadmap footer{display:none}
 .ssc-roadmap .panel{box-shadow:none}
-.ssc-roadmap .viewport{overflow:visible}
-.ssc-roadmap .canvas{transform:scale(.57)!important}
-.ssc-roadmap .scale-wrap{width:912px!important;height:432px!important}
-.ssc-roadmap main{padding:0}
-.ssc-roadmap .course{print-color-adjust:exact;-webkit-print-color-adjust:exact}
-.ssc-roadmap .lane{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+.ssc-roadmap main{padding:0}}
 .ssc-roadmap{--heidelberg-red:#c61826;--heidelberg-sand:#f4f1ea;--ssc-teal:#007d7a;--ssc-blue:#236f9d;--ink:#242b2e;--muted:#555f64;--line:#dcd9d2;--navy:#273d44;--green:#006861;--greenbg:#e1f3ee;--blue:#205b80;--bluebg:#eaf3f8;--paper:var(--heidelberg-sand)}
 .ssc-roadmap{font-family:Arial,Helvetica,sans-serif;background:var(--paper)}
 .ssc-roadmap header{background:#fff;color:var(--ink);border-top:6px solid var(--heidelberg-red);border-bottom:1px solid var(--line);padding-top:23px;padding-bottom:24px;position:relative}
@@ -118,24 +90,12 @@
 .ssc-roadmap .badge.warn{background:#fff;color:#9a1825;border-color:#d8a4a8}
 .ssc-roadmap select, .ssc-roadmap input, .ssc-roadmap .btn{border-color:#bdbeb9;border-radius:4px}
 .ssc-roadmap .btn:hover{background:#e7f3f1}
-.ssc-roadmap .btn:focus-visible, .ssc-roadmap .course:focus-visible, .ssc-roadmap select:focus-visible, .ssc-roadmap input:focus-visible{outline-color:var(--heidelberg-red)}
+.ssc-roadmap .btn:focus-visible, .ssc-roadmap select:focus-visible, .ssc-roadmap input:focus-visible{outline-color:var(--heidelberg-red)}
 .ssc-roadmap .legend, .ssc-roadmap .graphbar{color:var(--muted)}
 .ssc-roadmap .graphbar{background:#f8f6f1}
 .ssc-roadmap .swatch.green{border-color:#007d7a}
 .ssc-roadmap .swatch.blue{border-color:#4b90b7}
 .ssc-roadmap .lineicon{border-color:#7d8586}
-.ssc-roadmap .lineicon.cross{border-color:#a52334}
-.ssc-roadmap .lane{background:#f8f7f3;border-color:#dedbd4;border-radius:6px}
-.ssc-roadmap .lane h3{color:#263f48}
-.ssc-roadmap .lane h3 small{color:var(--heidelberg-red)}
-.ssc-roadmap .foundation-label{color:#526265}
-.ssc-roadmap .edge{stroke:#788588}
-.ssc-roadmap .edge.cross{stroke:#a52334}
-.ssc-roadmap .course{border-color:#4b90b7;color:var(--blue);border-radius:5px;box-shadow:0 1px 3px #172c3310}
-.ssc-roadmap .course.mvp{border-color:#007d7a;color:#005b55}
-.ssc-roadmap .course .meta{opacity:1}
-.ssc-roadmap .course:hover{box-shadow:0 0 0 3px #007d7a40}
-.ssc-roadmap .course.selected{box-shadow:0 0 0 3px var(--heidelberg-red)}
 .ssc-roadmap .chip{background:#f4f1ea;color:#3e5055;border-color:#dedbd4;border-radius:4px}
 .ssc-roadmap .band strong{color:var(--heidelberg-red)}
 .ssc-roadmap th{background:#f4f1ea;color:#39494c}
@@ -149,7 +109,6 @@
 .ssc-roadmap .dialog-body p{line-height:1.55}
 .ssc-roadmap .dialog-close{position:sticky;top:0}
 .ssc-roadmap .dialog-body h3:first-child{margin-top:0}
-.ssc-roadmap .dialog-body .muted{font-size:12px}
 .ssc-roadmap .dialog-body .link{line-height:1.7}
 @media print{.ssc-roadmap header{border-top:3px solid var(--heidelberg-red)}
 .ssc-roadmap header .eyebrow{color:var(--heidelberg-red)}}
@@ -166,11 +125,6 @@
 .ssc-roadmap .badge{border-radius:100px;font-weight:600}
 .ssc-roadmap .badge.warn{background:#fdf4f3}
 .ssc-roadmap .btn, .ssc-roadmap select, .ssc-roadmap input{border-radius:9px;min-height:40px}
-.ssc-roadmap .zoom button{min-height:32px}
-.ssc-roadmap .lane{border-radius:12px;background:#f8f8f5}
-.ssc-roadmap .course{border-radius:10px;box-shadow:0 2px 4px #273d4410}
-.ssc-roadmap .course .title{font-weight:650}
-.ssc-roadmap .course .meta{font-weight:650;letter-spacing:.025em}
 .ssc-roadmap .chip{border-radius:100px;background:#f5f3ee}
 .ssc-roadmap .graphbar{background:#faf9f6}
 .ssc-roadmap th{background:#f8f7f3}
@@ -237,7 +191,6 @@
 .ssc-roadmap .bib-list a .external-mark{font-size:13px;margin-left:4px}
 .ssc-roadmap .bib-list em{font-style:italic}
 @media(max-width:650px){.ssc-roadmap .bib-list li{padding:11px 10px;grid-template-columns:25px minmax(0,1fr);gap:5px;font-size:13px}}
-.ssc-roadmap .edge.conditional{stroke:#946c35;stroke-dasharray:5 4;marker-end:url(#conditionalArrow)}
 .ssc-roadmap .lineicon.conditional{border-color:#946c35;border-top-style:dashed}
 .ssc-roadmap .conditional-note{margin:10px 0 0;font-size:13px;color:#725021}
 .ssc-roadmap .assessment-note{border-left:3px solid var(--ssc-teal);padding-left:12px}
@@ -266,68 +219,30 @@
 .ssc-roadmap .audience-options{width:100%;max-width:100%}
 .ssc-roadmap .audience-definitions{grid-template-columns:1fr;gap:4px}
 .ssc-roadmap .audience-definitions dd{margin-bottom:8px}}
-.ssc-roadmap .edge.alternative{stroke:#007d7a;stroke-dasharray:3 3;marker-end:url(#arrow)}
 .ssc-roadmap .lineicon.alternative{border-color:#007d7a;border-top-style:dotted}
-.ssc-roadmap .choice-label{position:absolute;left:464px;top:289px;width:256px;text-align:center;font-size:10px;line-height:13px;font-weight:700;color:#006861;background:#e4f3ee;border-radius:6px;z-index:2}
 .ssc-roadmap .module-copy{display:grid;gap:4px;min-width:0}
 .ssc-roadmap .module-copy strong{font-weight:650}
 .ssc-roadmap .module-copy small{font-size:14px;font-weight:400;line-height:1.45;color:var(--muted)}
-.ssc-roadmap .author-panel{padding:22px;background:#faf8f4;border:1px solid var(--line);border-radius:14px;margin-top:26px}
-.ssc-roadmap .author-panel h3{color:var(--heidelberg-red)}
-.ssc-roadmap .reuse-list{display:grid;gap:10px;margin:12px 0}
-.ssc-roadmap .reuse-item{padding:12px;background:white;border:1px solid var(--line);border-radius:9px}
-.ssc-roadmap .reuse-item strong, .ssc-roadmap .reuse-item small{display:block}
-.ssc-roadmap .reuse-item small{color:var(--muted);margin:3px 0}
-.ssc-roadmap .author-panel .bib-list{background:white}
-.ssc-roadmap .study-note{color:var(--muted);font-size:13px;margin-top:5px}
 .ssc-roadmap .choice-note{font-size:13px;color:#006861;font-weight:650}
-.ssc-roadmap .author-banner{background:#fff4de;border:1px solid #e0c895;padding:12px 16px;border-radius:10px;margin-bottom:15px;color:#604719}
-.ssc-roadmap .roadmap-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;padding:18px;background:#f9f8f5;align-items:start}
-.ssc-roadmap .path-card{background:white;border:1px solid #dedbd4;border-radius:12px;min-width:0;overflow:hidden;box-shadow:0 2px 5px #273d4408}
-.ssc-roadmap .path-card.small{grid-column:span 2}
-.ssc-roadmap .path-card.half{grid-column:span 3}
-.ssc-roadmap .path-card.wide{grid-column:1/-1}
-.ssc-roadmap .path-head{padding:16px 18px 12px;border-bottom:1px solid #ece9e3}
-.ssc-roadmap .path-head h3{font-size:17px;color:#273d44;letter-spacing:-.018em;margin:0 0 5px}
-.ssc-roadmap .path-head p{font-size:13px;color:#556367;margin:0;line-height:1.5}
-.ssc-roadmap .diagram-scroll{padding:16px 12px;overflow:auto;text-align:center}
 .ssc-roadmap .path-svg{display:block;margin:auto;overflow:visible;min-width:0}
-.ssc-roadmap .path-card.wide .path-svg{max-width:100%;}
 .ssc-roadmap .path-svg text{pointer-events:none}
 .ssc-roadmap .course-link{cursor:pointer;transition:opacity .15s}
 .ssc-roadmap .course-link:hover>path, .ssc-roadmap .course-link:focus-visible>path, .ssc-roadmap .course-link.selected>path{stroke:#c61826;stroke-width:2.6}
 .ssc-roadmap .course-link:focus{outline:none}
 .ssc-roadmap .course-link.dim{opacity:.2}
 .ssc-roadmap .flow-edge.dim{opacity:.12}
-.ssc-roadmap .path-card.inactive{display:none}
-.ssc-roadmap .path-card.focused{grid-column:1/-1}
-.ssc-roadmap .path-card.focused .diagram-scroll{padding:24px}
-.ssc-roadmap .legend .reference-swatch{background:#f6f5f1;border-color:#767f82;border-style:dashed}
 .ssc-roadmap .legend .recommended-line{border-top-style:dashed;border-color:#397c9f}
 .ssc-roadmap .legend .conditional-line{border-top-style:dashed;border-color:#946c35}
 .ssc-roadmap .legend .or-line{border-color:#007d7a}
 .ssc-roadmap .graphbar{gap:14px}
-.ssc-roadmap .graphbar .path-toggle{display:flex;align-items:center;gap:8px;font-size:13px}
 .ssc-roadmap .graphbar input[type=checkbox]{width:auto;accent-color:#007d7a}
 .ssc-roadmap .benchmark-note{font-size:14px;color:#48575c;line-height:1.65}
 .ssc-roadmap .benchmark-note li{margin:6px 0}
 .ssc-roadmap .prereq-grid .recommended-note{color:#205b80;font-weight:650;margin:10px 0 4px}
-.ssc-roadmap .path-card .diagram-scroll svg{height:auto}
-.ssc-roadmap .path-card[data-path=lg3]{grid-row:2;grid-column:span 2}
-.ssc-roadmap .path-card[data-path=lg4]{grid-row:2;grid-column:span 4}
-.ssc-roadmap .path-card[data-path=lg5]{grid-row:3;grid-column:1/-1}
-.ssc-roadmap .path-card.focused{grid-row:auto!important;grid-column:1/-1!important}
-@media(max-width:1050px){.ssc-roadmap .path-card.small{grid-column:span 3}
-.ssc-roadmap .path-card.half{grid-column:1/-1}
-.ssc-roadmap .path-card[data-path]{grid-row:auto;grid-column:1/-1}}
-@media(max-width:650px){.ssc-roadmap .roadmap-grid{display:block;padding:10px}
-.ssc-roadmap .path-card{margin:0 0 12px}
-.ssc-roadmap .diagram-scroll{padding:12px 8px}
-.ssc-roadmap .path-svg{max-width:none!important;min-width:0}
-.ssc-roadmap .path-card.small .path-svg{max-width:none!important}
-.ssc-roadmap .path-card.focused .diagram-scroll{padding:12px 8px}}
-@media print{.ssc-roadmap .roadmap-grid{display:block}
-.ssc-roadmap .path-card{break-inside:avoid;margin:12px 0}
+
+@media(max-width:650px){
+.ssc-roadmap .path-svg{max-width:none!important;min-width:0}}
+@media print{
 .ssc-roadmap .path-svg{max-width:100%!important}
 .ssc-roadmap .graphbar{display:none}}
 .ssc-roadmap .full-map-scroll{overflow:auto;background:#f8f7f3;padding:12px;overscroll-behavior:contain;min-width:0}
